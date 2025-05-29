@@ -1,29 +1,48 @@
-<!DOCTYPE html>
-<html>
+<div class=" py-3">
+    <div class="container text-center text-sm">
 
-<body onload="startTime()">
+        <script>
+            $(document).ready(function(){
+   setInterval('updateClock()', 1000);
+});
 
-<h2>JavaScript Clock</h2>
+function updateClock (){
+ 	var currentTime = new Date ( );
+  	var currentHours = currentTime.getHours ( );
+  	var currentMinutes = currentTime.getMinutes ( );
+  	var currentSeconds = currentTime.getSeconds ( );
 
-<div id="txt"></div>
+  	// Pad the minutes and seconds with leading zeros, if required
+  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
 
-<script>
-function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
+  	// Choose either "AM" or "PM" as appropriate
+  	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
 
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-</script>
+  	// Convert the hours component to 12-hour format if needed
+  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
 
-</body>
-</html>
+  	// Convert an hours component of "0" to "12"
+  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+  	// Compose the string for display
+  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+  	
+  	
+   	$("#clock").html(currentTimeString);	  	
+ }
+        </script>
+
+<div class="row no-gutters mx-auto justify-content-center">
+     <i class="fa-regular fa-clock mt-1 mr-2"></i> 
+    <div class="mr-2"  id="clock"></div>
+
+     <p class="" style="opacity:1;">
+
+         
+
+
+       
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
