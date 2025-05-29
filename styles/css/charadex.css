@@ -15,24 +15,26 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color: #8FB7D4;
+  --cd-primary-color: #b2897b;
   --cd-primary-text-color: #fff;
 
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color: #939799;
+  --cd-secondary-color: #e1bdac;
   --cd-secondary-text-color: #fff;
 
   /* ============================================================= */
   /* Backgrounds
   ================================================================ */
-  --cd-body-background-color: #f8f8f8;
-  --cd-content-background-color: #ffffff;
+  --cd-body-background-color: #d1c3c3;
+  --cd-content-background-color: #efe6e6;
   --cd-faded-background-color: #f8f8f8;
 
   /* Background Extras */
   --cd-body-background-image: url();
+
+  --cd-site-banner-image: url(https://media.tenor.com/JfMCn-1dU18AAAAe/chinese-cat-side-eye.png);
 
   /* ============================================================= */
   /* Text
@@ -785,4 +787,22 @@ it work i was never meant for this life chat
     position: -webkit-sticky;
   position: sticky;
   top:0
+}
+
+#charadex-gallery {
+  background-color:#000!important;
+  padding:10px
+}
+
+.sidebar {
+  background-color:#50575c;
+  
+}
+
+.sidebar-section .sidebar-item {
+  background-color:#8FB7D4 
+}
+
+.banner {
+  background-image:var(--cd-site-banner-image)
 }
