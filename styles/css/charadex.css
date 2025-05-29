@@ -774,3 +774,15 @@ p:last-child {
   background-color: var(--cd-rarity-legendary-bg);
   color: var(--cd-rarity-legendary-txt);
 }
+
+
+/* ============================================================= */
+/* YA BOY JINIPPY'S TWEAKS [help me i'm googling everything to make
+it work i was never meant for this life chat
+/* ============================================================= */
+
+.stickyness {
+    position: -webkit-sticky;
+  position: sticky;
+  top:0
+}
