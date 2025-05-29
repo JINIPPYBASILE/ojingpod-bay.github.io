@@ -1,4 +1,57 @@
-<div class="sidebar stickyness" id="sidebar">
+<div class="stickyness mr-n3">
+    
+
+    <div class="container text-center text-sm">
+
+        <script>
+            $(document).ready(function(){
+   setInterval('updateClock()', 1000);
+});
+
+function updateClock (){
+ 	var currentTime = new Date ( );
+  	var currentHours = currentTime.getHours ( );
+  	var currentMinutes = currentTime.getMinutes ( );
+  	var currentSeconds = currentTime.getSeconds ( );
+
+  	// Pad the minutes and seconds with leading zeros, if required
+  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+  	// Choose either "AM" or "PM" as appropriate
+  	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+  	// Convert the hours component to 12-hour format if needed
+  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+  	// Convert an hours component of "0" to "12"
+  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+  	// Compose the string for display
+  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+  	
+  	
+   	$("#clock").html(currentTimeString);	  	
+ }
+        </script>
+
+<div class="row no-gutters justify-content-center">
+     <i class="fa-regular fa-clock mt-1 mr-2"></i> 
+    <div class="mr-2"  id="clock"></div>
+
+     <p class="" style="opacity:1;"><p>
+
+         
+
+
+       
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<div class="sidebar " id="sidebar">
+
+    
                         <ul>
     <li class="sidebar-header"><a href="https://biovents.club/masterlist" class="card-link">Masterlist</a></li>
     <li class="sidebar-section">
@@ -14,3 +67,6 @@
                     </li>
     </ul>
                 </div>
+</div>
+
+</div>

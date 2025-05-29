@@ -677,10 +677,6 @@ p:last-child {
   margin-bottom: 0 !important;
 }
 
-/* Small container for more compact view */
-.container {
-  max-width: 950px !important;
-}
 
 /* ============================================================= */
 /* Custom Classes
