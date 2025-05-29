@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 > [!WARNING]  
 > This feature hasn't been extensively tested and might have bugs! Use at your own risk.
 
@@ -241,3 +242,7 @@ Finally add this snippet _after_ the **Main Profile** tab pane.
 ```
 
 After that, you should be able to tag multiple characters in a gallery image and it'll show up in their profile!
+=======
+# OJINGPOD-BAY
+a bay... of ojingpods?
+>>>>>>> 367668000582f1da705e072eb82330764a142b52
