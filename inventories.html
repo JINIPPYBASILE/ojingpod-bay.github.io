@@ -67,14 +67,20 @@
 
     <!-- Gallery Container
     <!-- -------------------------------------------------------------- -->
-    <div id="charadex-gallery">
+<div class="row no-gutters">
+
+  <div class="col-lg-2">
+    <div class="load-html" data-source="includes/clock.html"></div>
+  </div>
+  <div class="col-lg-10">
+        <div id="charadex-gallery">
 
 
       <!-- Filters
       ----------------------------------------------------------------- -->
       <div class="card p-md-5 p-4 mb-4">
 
-        <h3 class="mb-0"><a href="inventories.html">Player Inventories</a></h3>
+        <h3 class="mb-0"><a href="inventories.html">User Index</a></h3>
 
         <!-- Faux Folders
         --------------------------------------------------------------- -->
@@ -127,7 +133,18 @@
             <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
             <ul class="pagination charadex-pagination charadex-pagination-top justify-content-center m-0"></ul>
             <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-          </div>
+          </div>f
+              <!-- Guideline
+        <!-- --------------------------------------------------------------- -->
+<hr class="mt-5 mx-n5">
+  <div class="row no-gutters mx-n4">
+  <div class="col-5 ">Username</div>
+    <div class="col-3 ">Primary Alias</div>
+      <div class="col-2 ">Rank</div>
+        <div class="col-2">Joined</div>
+  </div>
+  <hr class="mb-n4 mx-n5">
+
         </div>
 
         <!-- Prev & Next Topbar
@@ -142,10 +159,12 @@
               <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
             </div>
           </div>
+          
         </div>
-
+        
+      
       </div>
-
+    
 
       <!-- List Items Render Here
       ----------------------------------------------------------------- -->
@@ -164,6 +183,8 @@
       </div>
 
     </div>
+  </div>
+</div>
 
   </div>
 
@@ -186,9 +207,14 @@
 
     <!-- Gallery Items
     <!-- ------------------------------------------------------------------- -->
-    <div class="col-md-4 col-sm-6 p-1" id="charadex-gallery-item">
+    <div class="col-lg-12 p-1" id="charadex-gallery-item">
       <a class="card px-4 py-3 profilelink text-truncate" href="">
-        <h5 class="m-0"><span class="profileid"></span></h5>
+     <div class="row no-gutters">
+      <div class="col-5">   <h6 class="m-0"><span class="profileid"></span></h6></div>
+      <div class="col-3">  <h6 class="m-0"><span class="alias"></span></h6></div>
+      <div class="col-2">  <h6 class="m-0"><span class="rank"></span></h6></div>
+      <div class="col-2">  <h6 class="m-0"><span class="joindate"></span></h6></div>
+     </div>
       </a>
     </div>
 
@@ -197,9 +223,44 @@
     <!-- ------------------------------------------------------------------- -->
     <div class="col-12 p-2" id="charadex-profile">
       <div class="card">
+<div class="alert alert-info mx-4 mt-4">
+<a href="https://jinippybasile.github.io/ojingpod-bay.github.io/">Ojingpods</a> >> <a href="https://jinippybasile.github.io/ojingpod-bay.github.io/masterlist.html">Ojingpods Masterlist</a> >> <span class="namerepeat"></span>
+</div>
+        
+<div class="row no-gutters px-4">
+  <div class="col-1 ">
+  <img class="imageurl profile-image">
+  </div>
+  <div class="col-11">
+    <!-- Header -->
+        <h2 class=" text-center p-4"><span class="text-capitalize username"></span><a href="i'm adding this crap later"><i class="fas fa-exclamation-triangle fa-xs text-danger" data-toggle="tooltip" title="" style="opacity: 50%;" data-original-title="Click here to report this user."></i></a></h2>
+    <div class="row no-gutters">
+      <div class="col-lg-6"></div>
+           <!-- Item -->
+                  <div class="d-flex no-gutters ">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Alias</b>
+                    <a class="alias"></a>
+                  </div>
+                       <!-- Item -->
+                  <div class="d-flex no-gutters ">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Rank</b>
+                    <a class="rank"></a>
+                  </div>
+          <div class="col-lg-6">
 
-        <!-- Header -->
-        <h2 class="card-header text-center p-4"><span class="text-capitalize username"></span></h2>
+                 <!-- Item -->
+                  <div class="d-flex no-gutters ">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Joined</b>
+                    <a class="artist joindate"></a>
+                  </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
 
         <!-- Nav Tabs -->
         <!-- ----------------------------------------------------------- -->

@@ -782,7 +782,14 @@ it work i was never meant for this life chat
 .stickyness {
     position: -webkit-sticky;
   position: sticky;
-  top:0
+  top:2.5rem
+}
+
+
+.sticky-clock {
+    position: -webkit-sticky;
+  position: sticky;
+  top:1rem
 }
 
 #charadex-gallery {
@@ -806,4 +813,8 @@ it work i was never meant for this life chat
 
 .triangle {
   background-color:#000
+}
+
+.profile-image {
+  border-radius:50%
 }
