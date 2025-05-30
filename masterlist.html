@@ -214,13 +214,13 @@
         <div style="display: none;" id="charadex-prevnext-container">
       
           <div class="row no-gutters px-4 text-uppercase">
-            <div class="btn btn-primary col-4 px-1">
-              <a id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
-            </div>
+     
+              <a class="btn btn-primary col-4" id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
+       
             <div class="col-4"></div>
-            <div class="btn btn-primary col-4 px-1 ">
-              <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
-            </div>
+         
+              <a class="btn btn-primary col-4" id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
+            
           </div>
         </div>
 
@@ -228,7 +228,7 @@
         <div class="row no-gutters">
           <div class="col-lg-8">
             <!-- Header -->
-        <div class="card-header p-4 ">
+        <div class=" p-4 ">
           <h3 class="mb-0 pr-2"><a class="profilelink profileid"></a>: <span class="profilelink titleandorname"></span><span class="drawing"></span><span class="writing"></span><span class="tradeandsell"></span></h3> 
           <div class="text-muted">(#<span class="id"></span>)</div>
         
@@ -251,7 +251,7 @@
                   </div>
     
                   <!-- Item -->
-                  <div class="d-flex no-gutters mb-3">
+                  <div class="d-flex no-gutters mb-2">
                     <b class="text-muted col-md-5 col-6">Designer</b>
                     <a class="designer designerlink"></a>
                   </div>
@@ -268,27 +268,118 @@
 
           </div>
         </div>
+        <hr class="mt-n2">
         
 
-     <!-- Image -->
+   <div class="row no-gutters">
+    <div class="col-lg-7">
+
+  <!-- Image -->
         <div class="cd-profile-image-container p-md-5 p-4 text-center" >
           <img class="image img-fluid" src="">
         </div>
 
 
+    </div>
+    <div class="col-lg-5">
+
+<div class="col-12 ">
+            <div class="d-flex flex-column h-100">
+    <div class="flex-grow-1 w-100">
+                <div class="card character-bio w-100">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="infoTab-4682" data-toggle="tab" href="#info-4682" role="tab">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="notesTab-4682" data-toggle="tab" href="#notes-4682" role="tab">Notes</a>
+                    </li>
+                    
+                            
+                                                        </ul>
+            </div>
+            <div class="card-body tab-content">
+            
+                                
+                
+                <div class="tab-pane fade show active" id="info-4682">
+                                        <div class="row no-gutters mb-2">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h5>Pronouns:</h5>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-12"><span class="pronouns"></span></div>
+                    </div>
+                    <div class="row no-gutters mb-2">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h5>Theme Tag:</h5>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-12">
+                                                    <span class="theme"></span>
+                                                    </div>
+                    </div>
+                    <div class="row no-gutters mb-2">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h5>Created:</h5>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-12"><span class="creationdate"></span></div>
+                    </div>
+                                        <div class="mb-3">
+                        <div>
+                            <h5>Traits:</h5>
+                        </div>
+                            <!-- Item -->
+                  <div>
+             
+                    <div class="px-4 cd-text-pre traits cd-traits-scroll"></div>
+                  </div>
+                                                  
+                                            </div>
+
+                    
+                    
+                                    </div>
+
+                
+                <div class="tab-pane fade" id="notes-4682">
+                    <h5>Character Notes</h5>
+                                            <div class="notes"></div>
+                                                   
+               
+                                                        </div>
+
+                
+                <div class="tab-pane fade" id="credits-4682">
+
+                   
+
+                                    </div>
+
+                
+                
+                            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+    </div>
+   </div>
+
+   
+
 
         <!-- Nav Tabs
         <!-- ----------------------------------------------------------- -->
-        <hr class="my-0">
+        <hr class="mb-0">
         <ul class="nav row n-gutters m-n1 py-4 px-md-5 px-4" id="profile-tabs" role="tablist">
           <li class="col p-1 nav-item" role="presentation">
             <a class="w-100 btn btn-primary active" id="profile-tab" data-toggle="tab" href="#profile" 
             aria-controls="profile" aria-selected="true">Profile</a>
           </li>
-          <li class="col p-1 nav-item" role="presentation">
-            <a class="w-100 btn btn-primary" id="image-gallery-tab" data-toggle="tab" href="#image-gallery" 
-            aria-controls="image-gallery" aria-selected="true">Gallery</a>
-          </li>
+         
           <li class="col p-1 nav-item" role="presentation">
             <a class="w-100 btn btn-primary" id="logs-tab" data-toggle="tab" href="#logs" 
             aria-controls="logs" aria-selected="false">Logs</a>
@@ -320,14 +411,13 @@
                     <b class="text-muted col-md-5 col-6">Design Type</b>
                     <span class="designtype"></span>
                   </div>
-                  
-                  <hr>
-
-                  <!-- Item -->
-                  <div>
-                    <b class="text-muted">Traits</b>
-                    <div class="px-4 cd-text-pre traits cd-traits-scroll"></div>
+                     <div class="d-flex no-gutters mb-2">
+                    <b class="text-muted col-md-5 col-6">Status</b>
+                    <span class="status"></span>
                   </div>
+          
+
+              
 
                 </div>
               </div>
@@ -335,32 +425,68 @@
               <div class="col-md-6 p-2">
                 <div class="card bg-faded p-4 h-100">
 
+                  
                
     
                   <!-- Item -->
-                  <div class="d-flex no-gutters mb-2">
-                    <b class="text-muted col-md-5 col-6">Status</b>
-                    <span class="status"></span>
-                  </div>
+               
 
-                  <hr>
-                  
+                    <b class="text-muted ">Award Case</b>
+                    <div class="awardcase"></div>
+                 
                   <!-- Item -->
-                  <div>
-                    <b class="text-muted">Notes</b>
-                    <div class="px-4 cd-text-pre notes"></div>
-                  </div>
+                 
 
                 </div>
+                
               </div>
 
             </div>
           </div>
 
-          <!-- Image Gallery
+          
+          
+          
+          <!-- Logs
           <!-- ----------------------------------------------------------- -->
-          <div class="tab-pane fade" id="image-gallery" role="tabpanel" aria-labelledby="image-gallery-tab" tabindex="0">
-            <h4 class="text-primary">Gallery</h4>
+          <div class="tab-pane fade" id="logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
+            <h4 class="text-primary">Transaction Log</h4>
+            <div class="card bg-faded p-4" id="log-gallery">
+
+              <!-- List -->
+              <!-- --------------------------------------------------------------- -->
+              <div class="row no-gutters">
+                <div class="col-md-3"><b>Timestamp</b></div>
+                <div class="col-md-9"><b>Reason</b></div>
+              </div>
+              <hr>
+              <div class="log-list"></div>
+
+              <!-- List Item -->
+              <!-- --------------------------------------------------------------- -->
+              <div style="display: none;">
+                <div class="row no-gutters" id="log-gallery-item">
+                  <div class="col-md-3"><span class="timestamp"></span></div>
+                  <div class="col-md-9"><span class="reason"></span></div>
+                </div>
+              </div>
+
+              <!-- Pagination
+              <!-- --------------------------------------------------------------- -->
+              <div style="display: none;" class="log-pagination-container">
+                <hr>
+                <div class="nav d-flex justify-content-center mb-n4">
+                  <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+                  <ul class="pagination log-pagination log-pagination-top justify-content-center m-0"></ul>
+                  <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+            
+          <hr class="my-5 mx-n5">
+ <h4 class="text-primary">Prompt Gallery</h4>
             <div id="gallery-gallery">
 
               <!-- Pagination
@@ -411,57 +537,20 @@
               </div>
 
             </div>
-          </div>
-          
-          
-          <!-- Logs
-          <!-- ----------------------------------------------------------- -->
-          <div class="tab-pane fade" id="logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
-            <h4 class="text-primary">Transaction Log</h4>
-            <div class="card bg-faded p-4" id="log-gallery">
+       
 
-              <!-- List -->
-              <!-- --------------------------------------------------------------- -->
-              <div class="row no-gutters">
-                <div class="col-md-3"><b>Timestamp</b></div>
-                <div class="col-md-9"><b>Reason</b></div>
-              </div>
-              <hr>
-              <div class="log-list"></div>
-
-              <!-- List Item -->
-              <!-- --------------------------------------------------------------- -->
-              <div style="display: none;">
-                <div class="row no-gutters" id="log-gallery-item">
-                  <div class="col-md-3"><span class="timestamp"></span></div>
-                  <div class="col-md-9"><span class="reason"></span></div>
-                </div>
-              </div>
-
-              <!-- Pagination
-              <!-- --------------------------------------------------------------- -->
-              <div style="display: none;" class="log-pagination-container">
-                <hr>
-                <div class="nav d-flex justify-content-center mb-n4">
-                  <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                  <ul class="pagination log-pagination log-pagination-top justify-content-center m-0"></ul>
-                  <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Where to Update -->
+<div class="quotesprout"></div>
+           <!-- Where to Update -->
           <div class="card bg-faded py-2 px-3 mt-3 small text-center">
             <b>If you need to update this entry, please do so <a href="">here</a>.</b>
           </div>
-<div class=" mt-3 alert alert-danger speech-bubble-right h5 mb-0" style="word-wrap: break-word;">
-            Do you wish? Do you dream?
-        </div>
-        </div>
+       
+        
       </div>
+      
     </div>
+
+    
 
 
   </div>
