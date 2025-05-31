@@ -58,6 +58,7 @@
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
+  <div class="load-html" data-source="includes/banner.html"></div>  
   <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
@@ -80,10 +81,14 @@
         <!-- Title
         <!-- --------------------------------------------------------------- -->
         <h3 class="mb-0"><a href="traits.html">Trait Catalogue</a></h3>
+        
 
         <!-- Faux Folders
         <!-- --------------------------------------------------------------- -->
         <div style="display:none;" id="charadex-folder-container">
+          <div class="alert alert-info mt-4">
+<a href="https://jinippybasile.github.io/ojingpod-bay.github.io/">Ojingpods</a> >> <a href="https://jinippybasile.github.io/ojingpod-bay.github.io/traits.html">Traits</a> <span class="name"></span>
+</div>
           <hr>
           <div class="row no-gutters m-n1" id="charadex-folders"></div>
           <!-- Buttons -->
@@ -206,7 +211,15 @@
         <!-- Body -->
         <div class=" p-md-4 p-3 d-flex flex-fill align-items-center">
           <div class="row no-gutters m-n2">
-            <div class="col-md-4 p-2 mt-n5 "><img class="image img-fluid m-auto" src="" ></div>
+            <div class="col-md-4 p-2 mt-n5 trait-image-traits ">
+              <div class="col-12 p-5">
+                
+              </div>
+                <div class="col-12 p-2">
+                
+              </div><img class="image img-fluid m-auto" src="" style="   position: -webkit-sticky;
+  position: sticky;
+  top:0.75rem"></div>
             <div class="col-md-8 p-2 mt-n5 ">
         <div class="card">
               <div class="card-header">
@@ -223,9 +236,11 @@
           <br>
                    <div class="card bg-faded p-4">
                          <h6><b>Visual Examples</b></h6>
-                    
+           
+                      <span class="visual"></span>
+          
                    </div>
-                 <img class="visual img-fluid m-auto" src="" >
+              
             </div>
         </div>
             </div>
@@ -241,67 +256,59 @@
     <!-- Gallery Profile
     <!-- --------------------------------------------------------------- -->
     <div class="col-12 p-2" id="charadex-profile">
-      <div class="card">
+       <div class="card h-100">
 
+        
         <!-- Header -->
-        <div class="card-header px-md-5 px-4 py-4">
+        <div class=" p-4">
           <div class="row no-gutters align-items-end m-n1">
-            <div class="col"><h3 class="mb-0 pr-2"><a class="profilelink profileid"></a></h3></div>
-            <div class="col-auto text-right raritybadge"></div>
+            <span><h5 class="mb-0 pr-2"><a class="profilelink profileid"></a></h5></span>
+          ( <span class="col-auto mx-2 text-right raritybadge"></span>)
+       
           </div>
+       <p class="mt-1">    <b>Category: </b><span class="speciescategory"></span></p>
+        <p class="mt-n3"> <b>Species: </b>    <span class="speciestype"></span></p>
+         
         </div>
+        
 
-
-        <!-- Main Info
-        <!-- ----------------------------------------------------------- -->
-        <div class="p-md-5 p-4">
+        <!-- Body -->
+        <div class=" p-md-4 p-3 d-flex flex-fill align-items-center">
           <div class="row no-gutters m-n2">
-
-            <!-- Image -->
-            <div class="col-md-4 d-flex justify-content-center align-items-start text-center p-2">
-              <img class="image img-fluid" src="">
-            </div>
-
-            <div class="col-md-8 p-2">
-              <div class="card bg-faded p-4 h-100">
-
-                <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Trait</b>
-                  <span class="trait"></span>
-                </div>
-  
-                <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Type</b>
-                  <span class="type"></span>
-                </div>
-  
-                <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Rarity</b>
-                  <span class="rarity"></span>
-                </div>
-  
-                <!-- Item -->
-                <div class="d-flex no-gutters">
-                  <b class="text-muted col-md-5 col-6">Price</b>
-                  <span>$<span class="price"></span></span>
-                </div>
-
-                <hr>
+            <div class="col-md-4 p-2 mt-n5 trait-image-traits ">
+              <div class="col-12 p-5">
                 
-                <!-- Item -->
-                <div>
-                  <b class="text-muted">Description</b>
-                  <div class="px-4 cd-text-pre description"></div>
-                </div>
-
               </div>
+                <div class="col-12 p-2">
+                
+              </div><img class="image img-fluid m-auto" src="" style="   position: -webkit-sticky;
+  position: sticky;
+  top:0.75rem"></div>
+            <div class="col-md-8 p-2 mt-n5 ">
+        <div class="card">
+              <div class="card-header">
+              <h6><b><span class="traitecho"></span></b></h6>
             </div>
-
+            <div class="card-body">
+                <div class="description"></div>
+                <hr>
+                <h6><b>How to apply this trait:</b></h6>
+                   <div class="howtoapply"></div>
+                   <br>
+     <h6><b>Where do I obtain this trait?</b></h6>
+          <div class="wheretoget"></div>
+          <br>
+                   <div class="card bg-faded p-4">
+                         <h6><b>Visual Examples</b></h6>
+           
+                      <span class="visual"></span>
+          
+                   </div>
+              
+            </div>
+        </div>
+            </div>
           </div>
-
         </div>
 
 
