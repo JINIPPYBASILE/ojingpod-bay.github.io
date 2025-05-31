@@ -832,6 +832,17 @@ it work i was never meant for this life chat
   z-index: 1;
 }
 
+.watermarkimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+
 .image {
   position: relative;
   z-index: 2;
