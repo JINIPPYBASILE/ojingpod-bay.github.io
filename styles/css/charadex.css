@@ -819,3 +819,20 @@ it work i was never meant for this life chat
   border-radius:50%;
   max-height:135px;
 }
+
+.backgroundimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.image {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+}
