@@ -58,6 +58,7 @@
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
+    <div class="load-html" id="banner" data-source="includes/banner.html"></div>
   <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
@@ -65,7 +66,13 @@
   <-- Main List
   <-------------------------------------------------------------------- -->
   <div class="container" id="main-container">
-    <div id="charadex-gallery">
+<div class="row no-gutters">
+  <div class="col-lg-2">
+       <div class="load-html" data-source="includes/clock.html"></div>
+  <div class="load-html"  data-source="includes/promptssidebar.html"></div>
+  </div>
+  <div class="col-lg-10">
+        <div id="charadex-gallery">
 
       <!-- Top Card Container
       <!-- ----------------------------------------------------------------- -->
@@ -162,6 +169,8 @@
       </div>
 
     </div>
+  </div>
+</div>
   </div>
 
   <!-- --------------------------------------------------------------------
