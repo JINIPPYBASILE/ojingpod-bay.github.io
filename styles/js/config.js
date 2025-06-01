@@ -41,7 +41,8 @@ charadex.sheet = {
     faq:           "faq",
     staff:         "mods",
        worlds:         "worlds", 
-        species:         "species"
+        species:         "species",
+           heritage:         "heritage"
   },
 
   options: {
@@ -351,6 +352,55 @@ charadex.page.species = {
   },
 
 };
+
+
+/* species
+/* --------------------------------------------------------------- */
+charadex.page.heritage = {
+
+  sheetPage: charadex.sheet.pages.heritage,
+  sitePage: 'heritage',
+  dexSelector: 'charadex',
+  profileProperty: 'heritage',
+
+  sort: {
+    toggle: false,
+    key: "heritage",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['heritage']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
 
 
 
@@ -782,6 +832,13 @@ charadex.page.world = {
     ... charadex.page.species,
     dexSelector: 'species',
     amount: 10,
+  }, 
+
+    
+   heritage: {
+    ... charadex.page.heritage,
+    dexSelector: 'heritage',
+    amount: 2,
   }
 
 

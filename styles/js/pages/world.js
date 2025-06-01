@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   
-    /* traits
+    /* species
   ===================================================================== */
   let species = await charadex.initialize.page(null, charadex.page.world.species, (arr) => {
     
@@ -97,6 +97,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   });
 
+
+    /* heritage
+  ===================================================================== */
+  let heritage = await charadex.initialize.page(null, charadex.page.world.heritage, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.world.heritage.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
 
 
   /* Load Page
