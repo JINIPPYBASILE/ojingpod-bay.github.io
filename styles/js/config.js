@@ -42,7 +42,8 @@ charadex.sheet = {
     staff:         "mods",
        worlds:         "worlds", 
         species:         "species",
-           heritage:         "heritage"
+           heritage:         "heritage",
+             rarity:         "rarity"
   },
 
   options: {
@@ -313,6 +314,55 @@ charadex.page.species = {
   sitePage: 'species',
   dexSelector: 'charadex',
   profileProperty: 'species',
+
+  sort: {
+    toggle: true,
+    key: "id",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: true,
+    bottomToggle: true,
+    amount: 24,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'Type': charadex.sheet.options.itemTypes,
+      'Rarity': charadex.sheet.options.rarity,
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: 'Type',
+    parameters: charadex.sheet.options.itemTypes,
+  },
+
+  search: {
+    toggle: false,
+    filterToggle: false,
+    parameters: ['All', 'Item', 'Rarity']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* rarity
+/* --------------------------------------------------------------- */
+charadex.page.rarity = {
+
+  sheetPage: charadex.sheet.pages.rarity,
+  sitePage: 'rarity',
+  dexSelector: 'charadex',
+  profileProperty: 'rarity',
 
   sort: {
     toggle: true,
@@ -839,7 +889,14 @@ charadex.page.world = {
     ... charadex.page.heritage,
     dexSelector: 'heritage',
     amount: 10,
+  }, 
+
+  rarity: {
+    ... charadex.page.rarity,
+    dexSelector: 'rarity',
+    amount: 10,
   }
+
 
 
 };
