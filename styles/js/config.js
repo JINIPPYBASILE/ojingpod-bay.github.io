@@ -365,7 +365,7 @@ charadex.page.heritage = {
 
   sort: {
     toggle: true,
-    key: "heritage",
+    key: "id",
     order: "asc",
     parameters: []
   },
@@ -373,26 +373,27 @@ charadex.page.heritage = {
   pagination: {
     toggle: true,
     bottomToggle: true,
-    amount: 12,
+    amount: 24,
   },
 
   filters: {
     toggle: false,
     parameters: {
-      'TBA': [],
+      'Type': charadex.sheet.options.itemTypes,
+      'Rarity': charadex.sheet.options.rarity,
     }
   },
 
   fauxFolder: {
     toggle: false,
-    folderProperty: '',
-    parameters: [],
+    folderProperty: 'Type',
+    parameters: charadex.sheet.options.itemTypes,
   },
 
   search: {
-    toggle: true,
-    filterToggle: false,
-    parameters: ['heritage']
+    toggle: false,
+    filterToggle: true,
+    parameters: ['All', 'Item', 'Rarity']
   },
 
   prevNext: {
@@ -400,7 +401,6 @@ charadex.page.heritage = {
   },
 
 };
-
 
 
 
@@ -838,7 +838,7 @@ charadex.page.world = {
    heritage: {
     ... charadex.page.heritage,
     dexSelector: 'heritage',
-    amount: 2,
+    amount: 10,
   }
 
 
