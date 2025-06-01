@@ -40,7 +40,7 @@ charadex.sheet = {
        news:       "news",
     faq:           "faq",
     staff:         "mods",
-      world:         "world"
+       worlds:         "worlds"
   },
 
   options: {
@@ -305,30 +305,54 @@ charadex.page.staff = {
 
 
 
-
-/* Index
+/* worlds
 /* --------------------------------------------------------------- */
-charadex.page.world = {
+charadex.page.worlds = {
 
-  prompts: {
-    ... charadex.page.prompts,
-    dexSelector: 'prompt',
-    amount: 3,
+  sheetPage: charadex.sheet.pages.worlds,
+  sitePage: 'worlds',
+  dexSelector: 'charadex',
+  profileProperty: 'username',
+
+  sort: {
+    toggle: false,
+    key: "username",
+    order: "asc",
+    parameters: []
   },
 
-  staff: {
-    ... charadex.page.staff,
-    dexSelector: 'staff',
-    amount: 6,
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
   },
 
-  designs: {
-    ... charadex.page.masterlist,
-    dexSelector: 'design',
-    amount: 4,
-  }
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['Username']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
 
 };
+
+
 
 /* FAQ
 /* --------------------------------------------------------------- */
@@ -674,6 +698,38 @@ charadex.page.index = {
   }
 
 };
+
+
+/* world
+/* --------------------------------------------------------------- */
+charadex.page.world = {
+
+  prompts: {
+    ... charadex.page.prompts,
+    dexSelector: 'prompt',
+    amount: 3,
+  },
+
+  items: {
+    ... charadex.page.items,
+    dexSelector: 'items',
+    amount: 6,
+  },
+
+  traits: {
+    ... charadex.page.traits,
+    dexSelector: 'trait',
+    amount: 4,
+  },
+
+   worlds: {
+    ... charadex.page.worlds,
+    dexSelector: 'worlds',
+    amount: 1,
+  }
+
+};
+
 
 
 export { charadex };

@@ -11,8 +11,8 @@
   <!-- About Your Site                                                   -->
   <!-- ----------------------------------------------------------------- -->
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-  <title>Charadex World</title>
-  <meta name="title" content="Charadex World" />
+  <title>Charadex</title>
+  <meta name="title" content="Charadex" />
   <meta name="type" content="website" />
   <meta name="url" content="https://www.charadex.com/" />
   <meta name="image" content="assets/meta.png" />
@@ -51,35 +51,151 @@
 
 <body id="charadex-body">
 
+  <!-- --------------------------------------------------------------------
+  <-- Header
+  <-------------------------------------------------------------------- -->
+ <div class="load-html" data-source="includes/banner.html"></div>
+  <div class="load-html" data-source="includes/header.html"></div>
+<div class="container" id="main-container">
+<div class="row no-gutters">
+  <div class="col-lg-2">
+<div class="load-html" data-source="includes/clock.html"></div>
+<div class="load-html" data-source="includes/sidebar.html"></div>
+  </div>
+  <div class="col-lg-10">
+      <!-- --------------------------------------------------------------------
+  <-- Main List
+  <-------------------------------------------------------------------- -->
+  
+   
+<body id="charadex-body">
 
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
-  <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
   <!-- --------------------------------------------------------------------
   <-- Main List
   <-------------------------------------------------------------------- -->
-  <div class="container" id="main-container">
-    <div class="card p-md-5 p-4">
 
-      <!-- General Info
-      <-------------------------------------------------------------------- -->
-      <div class="p-3">
-        <h3 class="text-primary mb-3">About World</h3>
-        <div class="px-4">
-          <p>This is where you can write about your world and stuff!!</p>
-        </div>
-      </div>
+    <div class="card p-md-5 p-4 mb-3">
+        <h3 class="mb-0"><a href="world.html">World</a></h3>
+<div class="row no-gutters">
+  <div class="col-lg-8">
+        <!-- Designs
+    <!-- --------------------------------------------------------------- -->
+    <div id="worlds-gallery">
 
+      <hr>
+      <div class="row no-gutters worlds-list softload m-n2"></div>
     </div>
-  </div>
 
+  </div>
+  <div class="col-lg-4">
+        
+    <!-- Designs
+    <!-- --------------------------------------------------------------- -->
+    <div class="card p-md-5 p-4 mb-3" id="trait-gallery">
+      <h4 class="mb-0"><a href="masterlist.html">Recent Designs</a></h4>
+      <hr>
+      <div class="row no-gutters trait-list softload m-n2"></div>
+    </div>
+
+  
+  
+
+    <!-- Staff
+    <!-- --------------------------------------------------------------- -->
+    <div class="card p-md-5 p-4 mb-3" id="item-gallery">
+      <h4 class="mb-0"><a href="staff.html">Staff</a></h4>
+      <hr>
+      <div class="row no-gutters item-list softload m-n2"></div>
+    </div>
+
+  </div>
+</div>
+  
+  
+    
+
+
+
+  </div>
+  </div>
+  </div>
+  </div>
   <!-- --------------------------------------------------------------------
   <-- Footer
   <-------------------------------------------------------------------- -->
-  <div class="load-html" id="footer" data-source="includes/footer.html"></div>
+  <div class="load-html" data-source="includes/footer.html"></div>
+
+
+
+  <!-- --------------------------------------------------------------------
+  <-- Repeat Items
+  <-- Do not remove 'display:none;'
+  <-------------------------------------------------------------------- -->
+  <div style="display:none;">
+
+    <!-- traits information
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-3 col-sm-6 p-2" id="trait-gallery-item">
+      <div class="card bg-faded h-100">
+        <div class="card-header bg-faded text-center">
+          <h5 class="mb-0">
+            <a class="profileid profilelink" href=""></a>
+          </h5>
+        </div>
+        <div class="card-body cd-gallery-card d-flex flex-fill">
+          <img class="image img-fluid m-auto" src="" >
+        </div>
+        <div class="card-footer bg-faded text-center">
+          <a class="owner ownerlink small" href=""></a>
+        </div>
+      </div>
+    </div>
+
+     <!-- worlds information
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-12" id="worlds-gallery-item">
+      <div class="card bg-faded h-100">
+        <div class="card-header bg-faded text-center">
+          <h5 class="mb-0">
+            <a class="profileid profilelink" href=""></a>
+          </h5>
+        </div>
+        <div class="card-body cd-gallery-card d-flex flex-fill">
+          <img class="image img-fluid m-auto" src="" >
+        </div>
+        <div class="card-footer bg-faded text-center">
+          <div class="information"></div>
+          <a class="owner ownerlink small" href=""></a>
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <!-- Staff
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-4 col-sm-6 p-2" id="item-gallery-item">
+      <div class="card bg-faded p-3 h-100">
+        <div class="row no-gutters m-n2">
+          <div class="col-md-5 p-2">
+            <img class="image img-thumbnail img-fluid m-auto" src="">
+          </div>
+          <div class="col-md-7 p-2">
+            <div class="text-truncate">
+              <a class="profileid profilelink"></a>
+            </div>
+            <hr class="my-2">
+            <span class="small jobtitle"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   <!-- ----------------------------------------------------------------- -->
   <!-- JS                                                                -->
@@ -93,6 +209,9 @@
 
   <!-- Charadex Script -->
   <script src="styles/js/pages/base.js" type="module"></script>
+  <script src="styles/js/pages/world.js" type="module"></script>
+
+
 
 
 </body>
