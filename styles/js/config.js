@@ -305,7 +305,6 @@ charadex.page.staff = {
 
 };
 
-
 /* species
 /* --------------------------------------------------------------- */
 charadex.page.species = {
@@ -316,35 +315,36 @@ charadex.page.species = {
   profileProperty: 'species',
 
   sort: {
-    toggle: false,
-    key: "species",
+    toggle: true,
+    key: "id",
     order: "asc",
     parameters: []
   },
 
   pagination: {
-    toggle: false,
-    bottomToggle: false,
-    amount: 12,
+    toggle: true,
+    bottomToggle: true,
+    amount: 24,
   },
 
   filters: {
     toggle: false,
     parameters: {
-      'TBA': [],
+      'Type': charadex.sheet.options.itemTypes,
+      'Rarity': charadex.sheet.options.rarity,
     }
   },
 
   fauxFolder: {
     toggle: false,
-    folderProperty: '',
-    parameters: [],
+    folderProperty: 'Type',
+    parameters: charadex.sheet.options.itemTypes,
   },
 
   search: {
-    toggle: true,
+    toggle: false,
     filterToggle: false,
-    parameters: ['species']
+    parameters: ['All', 'Item', 'Rarity']
   },
 
   prevNext: {
@@ -354,7 +354,7 @@ charadex.page.species = {
 };
 
 
-/* species
+/* heritage
 /* --------------------------------------------------------------- */
 charadex.page.heritage = {
 
