@@ -37,6 +37,7 @@ charadex.sheet = {
     items:         "items",
     traits:        "traits",
     prompts:       "prompts",
+       news:       "news",
     faq:           "faq",
     staff:         "mods",
   },
@@ -206,6 +207,53 @@ charadex.page.prompts = {
 
 };
 
+
+/* news
+/* --------------------------------------------------------------- */
+charadex.page.news = {
+
+  sheetPage: charadex.sheet.pages.news,
+  sitePage: 'news',
+  dexSelector: 'charadex',
+  profileProperty: 'title',
+
+  sort: {
+    toggle: true,
+    key: "enddate",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: true,
+    bottomToggle: true,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['Title']
+  },
+
+  prevNext: {
+    toggle: true,
+  },
+
+};
 
 /* Staff
 /* --------------------------------------------------------------- */
