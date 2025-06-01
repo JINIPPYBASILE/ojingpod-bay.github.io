@@ -40,6 +40,7 @@ charadex.sheet = {
        news:       "news",
     faq:           "faq",
     staff:         "mods",
+      world:         "world"
   },
 
   options: {
@@ -302,6 +303,32 @@ charadex.page.staff = {
 
 };
 
+
+
+
+/* Index
+/* --------------------------------------------------------------- */
+charadex.page.world = {
+
+  prompts: {
+    ... charadex.page.prompts,
+    dexSelector: 'prompt',
+    amount: 3,
+  },
+
+  staff: {
+    ... charadex.page.staff,
+    dexSelector: 'staff',
+    amount: 6,
+  },
+
+  designs: {
+    ... charadex.page.masterlist,
+    dexSelector: 'design',
+    amount: 4,
+  }
+
+};
 
 /* FAQ
 /* --------------------------------------------------------------- */
