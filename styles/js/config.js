@@ -364,15 +364,15 @@ charadex.page.heritage = {
   profileProperty: 'heritage',
 
   sort: {
-    toggle: false,
+    toggle: true,
     key: "heritage",
     order: "asc",
     parameters: []
   },
 
   pagination: {
-    toggle: false,
-    bottomToggle: false,
+    toggle: true,
+    bottomToggle: true,
     amount: 12,
   },
 
