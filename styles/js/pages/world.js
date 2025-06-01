@@ -86,6 +86,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   });
 
+  
+    /* traits
+  ===================================================================== */
+  let species = await charadex.initialize.page(null, charadex.page.world.species, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.world.species.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
 
   /* Load Page
   ===================================================================== */

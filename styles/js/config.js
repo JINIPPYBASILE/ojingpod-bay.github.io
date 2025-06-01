@@ -40,7 +40,8 @@ charadex.sheet = {
        news:       "news",
     faq:           "faq",
     staff:         "mods",
-       worlds:         "worlds"
+       worlds:         "worlds", 
+        species:         "species"
   },
 
   options: {
@@ -295,6 +296,54 @@ charadex.page.staff = {
     toggle: true,
     filterToggle: false,
     parameters: ['Username']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* species
+/* --------------------------------------------------------------- */
+charadex.page.species = {
+
+  sheetPage: charadex.sheet.pages.species,
+  sitePage: 'species',
+  dexSelector: 'charadex',
+  profileProperty: 'species',
+
+  sort: {
+    toggle: false,
+    key: "species",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['species']
   },
 
   prevNext: {
@@ -712,7 +761,7 @@ charadex.page.world = {
 
   items: {
     ... charadex.page.items,
-    dexSelector: 'items',
+    dexSelector: 'item',
     amount: 6,
   },
 
@@ -726,7 +775,15 @@ charadex.page.world = {
     ... charadex.page.worlds,
     dexSelector: 'worlds',
     amount: 1,
+  },
+
+  
+   species: {
+    ... charadex.page.species,
+    dexSelector: 'species',
+    amount: 10,
   }
+
 
 };
 
