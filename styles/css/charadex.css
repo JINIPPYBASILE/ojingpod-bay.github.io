@@ -272,7 +272,7 @@ a:active {
 .navbar {
   font-family: var(--cd-navbar-font-family) !important;
   z-index: 2000;
-  background-image:url(https://i.postimg.cc/RM56QSMf/IMG-0076.png);
+  background-image:url(assets/nav-bar.png);
   background-size:cover;
   background-position:center;
   height:215px;
@@ -486,7 +486,7 @@ a:active {
 }
 
 .card-header {
-  background-color: var(--cd-card-header-background-color) !important;
+  background-color: var( --cd-secondary-text-color)!important;
   border-bottom-color: var(--cd-card-border-color) !important;
   border-bottom-width: var(--cd-card-border-width) !important;
   border-bottom-style: var(--cd-card-border-style) !important;
@@ -509,6 +509,13 @@ a:active {
 }
 
 
+.card-header a{
+  color:#a64b66
+}
+
+.card-header a:hover{
+  color:#9f85f4
+}
 
 /* ============================================================= */
 /* Buttons & Badges
