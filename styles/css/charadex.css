@@ -253,8 +253,11 @@ body {
 a,
 a:visited {
   color: var(--cd-link-text-color);
-  transition: color .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
 }
+
+
 
 a:hover,
 a:focus,
@@ -523,7 +526,8 @@ a:active {
 .badge.badge-primary {
   color: var(--cd-button-text-color) !important;
   background-color: var(--cd-button-background-color) !important;
-  border-color: var(--cd-button-border-color) !important;
+ border:5px solid #ffecec;
+ filter:drop-shadow(5px 5px 0px #ad1c51)
 }
 
 .btn.btn-primary:hover,
@@ -533,7 +537,7 @@ a.badge.badge-primary:hover,
 a.badge.badge-primary:focus,
 a.badge.badge-primary:active {
   color: var(--cd-button-text-color-hover) !important;
-  border-color: var(--cd-button-border-color-hover) !important;
+ border:5px solid #ad1c51;
   background-color: var(--cd-button-background-color-hover) !important;
   box-shadow: none !important;
 }
@@ -833,16 +837,14 @@ it work i was never meant for this life chat
 }
 
 .sidebar {
-  background-color:#f6dada;
-  border-top-left-radius:10px;
-  border-bottom-left-radius:10px;
-  padding-top:10px;
-  padding-left:0px;
-    padding-bottom:10px;
+   background-color:#f6dada!important;
+   border-top-left-radius:10px;
+   border-bottom-left-radius:10px;
 }
 
 .sidebar-section .sidebar-item {
   background-color:#8a87e5;
+   list-style-type: none ;
    padding-left:10px; 
    margin-left:0px;
    transition:all 0.2s ease
@@ -851,8 +853,16 @@ it work i was never meant for this life chat
 .sidebar-section .sidebar-item:hover {
 background-color:#ebc2c2;
 padding-left:15px;
-margin-left:-6%
+margin-left:-6%;
 
+}
+
+.sidebar-section .sidebar-item a {
+  color:#4d33d2
+}
+
+.sidebar-section .sidebar-item a:hover {
+ color:#530303
 }
 
 .sidebar-header {
@@ -952,6 +962,20 @@ background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
     filter:drop-shadow(10px 0px 10px #891d6098);
     background-image:url(https://i.postimg.cc/B6vQ6w25/IMG-0075.png)
 }
+
+.bg-pink {
+  background-image:linear-gradient(335deg, #d06889, #e4a1a1) !important;
+  border-radius:10px;
+}
+
+.bg-pink a {
+  color:#b3dcf1
+}
+
+.bg-pink a:hover {
+  color:#fdf3f3
+}
+
 @media (min-width: 992px) {
  
 }
