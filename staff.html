@@ -58,6 +58,8 @@
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
+    <div class="load-html" data-source="includes/banner.html"></div>
+
   <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
@@ -65,7 +67,13 @@
   <-- Main List
   <-------------------------------------------------------------------- -->
   <div class="container" id="main-container">
-    <div id="charadex-gallery">
+<div class="row no-gutters">
+   <div class="col-lg-2">
+   <div class="load-html" data-source="includes/clock.html"></div>
+      <div class="load-html" data-source="includes/usersidebar.html"></div>
+ </div>
+ <div class="col-lg-10">
+     <div id="charadex-gallery">
 
       <!-- Top Card Container
       <!-- ----------------------------------------------------------------- -->
@@ -162,6 +170,8 @@
       </div>
 
     </div>
+ </div>
+</div>
   </div>
 
   <!-- --------------------------------------------------------------------
@@ -174,13 +184,13 @@
   <-- Do not remove 'display:none;'
   <-------------------------------------------------------------------- -->
   <div style="display:none;">
-    <div class="col-md-6 p-2" id="charadex-gallery-item">
+    <div class="col-12 p-2" id="charadex-gallery-item">
       <div class="card p-4 h-100">
         <div class="row no-gutters m-n2">
-          <div class="col-md-4 p-2">
+          <div class="col-lg-2 col-4 p-2">
             <img class="image img-thumbnail bg-faded img-fluid m-auto" src="">
           </div>
-          <div class="col-md-8 p-2">
+          <div class="col-lg-10 col-8 p-2">
             <div class="d-flex justify-content-between align-items-end px-2">
               <a class="profileid profilelink"></a>
               <span class="jobtitle"></span>
