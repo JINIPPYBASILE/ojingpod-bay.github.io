@@ -15,37 +15,41 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color: #b2897b;
-  --cd-primary-text-color: #fff;
+  --cd-primary-color: #e6a9c4;
+  --cd-primary-text-color: #c44f69;
 
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color: #e1bdac;
-  --cd-secondary-text-color: #fff;
+  --cd-secondary-color: #de90b3;
+  --cd-secondary-text-color: #efc8da;
 
   /* ============================================================= */
   /* Backgrounds
   ================================================================ */
   --cd-body-background-color: #d1c3c3;
-  --cd-content-background-color: #efe6e6;
-  --cd-faded-background-color: #f8f8f8;
+  --cd-content-background-color: #b375d5;
+    --cd-content-background-color-gradient: #754db5;
+    --cd-content-background-color-not-main-card: #e495bf;
+  --cd-faded-background-color: #f8d0d3;
 
   /* Background Extras */
-  --cd-body-background-image: url();
+  --cd-body-background-image: url(https://i.postimg.cc/RZc0btMt/IMG-0078.png);
+  --cd-logo: url(https://i.postimg.cc/V6HsbBFx/IMG-0077.png);
 
   --cd-site-banner-image: url(https://media.tenor.com/JfMCn-1dU18AAAAe/chinese-cat-side-eye.png);
 
   /* ============================================================= */
   /* Text
   ================================================================ */
-  --cd-body-text-color: #303030;
-  --cd-faded-text-color: #575757;
+  --cd-body-text-color: #f8e6e6;
+  --cd-faded-text-color: #42167f;
 
   /* ============================================================= */
   /* Borders
   ================================================================ */
   --cd-border-color: rgba(0, 0, 0, 0.125);
+--cd-divider-color: rgba(222, 177, 177, 0.668);
   --cd-border-width: 1px;
   --cd-border-style: solid;
   --cd-border-radius: 1rem;
@@ -53,7 +57,7 @@ body {
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color: #222222;
+  --cd-navbar-background-color: #5e3e94;
   --cd-navbar-brand-color: var(--cd-primary-color);
   --cd-navbar-brand-color-hover: var(--cd-secondary-color);
   --cd-navbar-text-color: var(--cd-content-background-color);
@@ -127,7 +131,7 @@ body {
   /* Link
   ================================================================ */
 
-  --cd-link-text-color: #4c8ebd;
+  --cd-link-text-color: #a9baff;
   --cd-link-text-color-hover: var(--cd-secondary-color);
 
 
@@ -136,7 +140,7 @@ body {
   ================================================================ */
 
   --cd-hr-border-width: var(--cd-border-width);
-  --cd-hr-border-color: var(--cd-border-color);
+  --cd-hr-border-color: var(--cd-divider-color);
   --cd-hr-border-style: var(--cd-border-style);
 
 
@@ -234,8 +238,10 @@ body {
   /* Global Background */
   background-color: var(--cd-body-background-color);
   background-image: var(--cd-body-background-image);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
+  background-attachment:fixed;
+
 
 }
 
@@ -261,14 +267,25 @@ a:active {
 /* Navbar
 /* ============================================================= */
 .navbar {
-  background-color: var(--cd-navbar-background-color) !important;
   font-family: var(--cd-navbar-font-family) !important;
   z-index: 2000;
+  background-image:url(https://i.postimg.cc/RM56QSMf/IMG-0076.png);
+  background-size:cover;
+  background-position:center;
+  height:215px;
+  max-width:1920px;
+
+  
 }
 
 .navbar .navbar-brand {
   color: var(--cd-navbar-brand-color) !important;
   font-size: 2rem;
+  text-shadow:1px 1px 30px #ea4070, 1px 1px 30px #ad14a8;
+  background-color:#c695957a;
+  padding:10px;
+  border-radius:20px;
+  box-shadow:0px 0px 10px #940e5c47
 }
 
 .navbar .navbar-brand:hover,
@@ -278,11 +295,16 @@ a:active {
 
 .navbar .navbar-nav .nav-link {
   color: var(--cd-navbar-link-color) !important;
+  background-color:#ffe8e8e3;
+  margin-left:10px;
+  border-radius:15px;
+  transition:all 0.2s ease
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
-  color: var(--cd-navbar-link-color-hover) !important;
+  color: #c15858 !important;
+   background-color:#ffcecee8;
 }
 
 .navbar .navbar-toggler {
@@ -308,8 +330,8 @@ a:active {
 
 .navbar .dropdown-menu {
   color: var(--cd-navbar-dropdown-link-color) !important;
-  background-color: var(--cd-navbar-dropdown-background-color) !important;
   border-radius: var(--cd-navbar-dropdown-border-radius) !important;
+
   border: none;
   margin-top: 0;
 }
@@ -456,6 +478,8 @@ a:active {
   border-style: var(--cd-card-border-style) !important;
   border-color: var(--cd-card-border-color) !important;
   border-radius: var(--cd-border-radius) !important;
+ background-image:linear-gradient( 135deg, var(--cd-content-background-color) 
+  , var(--cd-content-background-color-gradient) 80%)
 }
 
 .card-header {
@@ -476,6 +500,11 @@ a:active {
   border-radius: 0 0  calc(var(--cd-border-radius) - 1px) calc(var(--cd-border-radius) - 1px) !important;
 }
 
+.card .card {
+  background-color:var(--cd-content-background-color-not-main-card) !important;
+  background-image:none
+}
+
 
 
 /* ============================================================= */
@@ -487,6 +516,8 @@ a:active {
   border-width: var(--cd-button-border-width) !important;
   border-radius: var(--cd-button-border-radius) !important;
 }
+
+
 
 .btn.btn-primary,
 .badge.badge-primary {
@@ -580,8 +611,9 @@ h4, h5, h6 {
 
 hr {
   border-top-color: var(--cd-hr-border-color) !important;
-  border-top-width: var(--cd-hr-border-width) !important;
-  border-top-style: var(--cd-hr-border-style) !important;
+
+  border-top-style: dashed;
+  border-top-width:4.25px
 }
 
 img {
@@ -782,34 +814,75 @@ it work i was never meant for this life chat
 .stickyness {
     position: -webkit-sticky;
   position: sticky;
-  top:2.5rem
+  top:8.5rem
 }
 
 
 .sticky-clock {
     position: -webkit-sticky;
   position: sticky;
-  top:1rem
+  top:3.5rem;
 }
 
 
 
 #charadex-gallery {
-  background-color:#000!important;
-  padding:10px
+  background-color:#f6dada!important;
+  padding:10px;
+  border-radius:10px;
 }
 
 .sidebar {
-  background-color:#50575c;
-  
+  background-color:#f6dada;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  padding-top:10px;
+  padding-left:0px;
+    padding-bottom:10px;
 }
 
 .sidebar-section .sidebar-item {
-  background-color:#8FB7D4 
+  background-color:#8a87e5;
+   padding-left:10px; 
+   margin-left:0px;
+   transition:all 0.2s ease
 }
 
+.sidebar-section .sidebar-item:hover {
+background-color:#ebc2c2;
+padding-left:15px;
+margin-left:-6%
+
+}
+
+.sidebar-header {
+ background-color:#4240ab;
+ list-style-type: none ;
+ padding:10px;
+ border-top-left-radius:10px
+}
+
+.sidebar-footer {
+   background-color:#4240ab;
+ list-style-type: none ;
+ padding:10px;
+ border-bottom-left-radius:10px
+
+}
+
+.sidebar-section-header{ 
+ background-color:#7a5de1;
+  padding-left:10px;
+ list-style-type: none !important
+}
 .banner {
-  background-image:var(--cd-site-banner-image)
+background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
+}
+
+#main-container {
+  background-image:linear-gradient(180deg, #c8486a86,rgba(0, 0, 0, 0) 90%);
+  margin-top:-1.75%;
+
 }
 
 
@@ -851,3 +924,34 @@ it work i was never meant for this life chat
 }
 
 
+.watermarkimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+
+.image {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  filter:drop-shadow(10px 0px 10px #891d6098)
+}
+
+
+
+.shell-clock {
+    filter:drop-shadow(10px 0px 10px #891d6098);
+    background-image:url(https://i.postimg.cc/B6vQ6w25/IMG-0075.png)
+}
+@media (min-width: 992px) {
+ 
+}
