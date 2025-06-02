@@ -43,7 +43,8 @@ charadex.sheet = {
        worlds:         "worlds", 
         species:         "species",
            heritage:         "heritage",
-             rarity:         "rarity"
+             rarity:         "rarity", 
+             transformations: "transformations"
   },
 
   options: {
@@ -314,6 +315,55 @@ charadex.page.species = {
   sitePage: 'species',
   dexSelector: 'charadex',
   profileProperty: 'species',
+
+  sort: {
+    toggle: true,
+    key: "id",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: true,
+    bottomToggle: true,
+    amount: 24,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'Type': charadex.sheet.options.itemTypes,
+      'Rarity': charadex.sheet.options.rarity,
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: 'Type',
+    parameters: charadex.sheet.options.itemTypes,
+  },
+
+  search: {
+    toggle: false,
+    filterToggle: false,
+    parameters: ['All', 'Item', 'Rarity']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* transformations
+/* --------------------------------------------------------------- */
+charadex.page.transformations = {
+
+  sheetPage: charadex.sheet.pages.transformations,
+  sitePage: 'transformations',
+  dexSelector: 'charadex',
+  profileProperty: 'transformation',
 
   sort: {
     toggle: true,
@@ -891,13 +941,19 @@ charadex.page.world = {
     amount: 10,
   }, 
 
-  rarity: {
+   
+   rarity: {
     ... charadex.page.rarity,
     dexSelector: 'rarity',
     amount: 10,
+  },
+ 
+   transformations: {
+    ... charadex.page.transformations,
+    dexSelector: 'transformation',
+    amount: 10,
   }
-
-
+ 
 
 };
 

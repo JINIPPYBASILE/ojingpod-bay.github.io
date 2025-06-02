@@ -109,6 +109,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
 
+    /* heritage
+  ===================================================================== */
+  let rarity = await charadex.initialize.page(null, charadex.page.world.rarity, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.world.rarity.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
+    /* heritage
+  ===================================================================== */
+  let transformations = await charadex.initialize.page(null, charadex.page.world.transformations, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.world.transformations.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
+
   /* Load Page
   ===================================================================== */
   charadex.tools.loadPage('.softload', 500);
