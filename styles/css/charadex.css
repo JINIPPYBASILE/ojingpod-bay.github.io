@@ -274,7 +274,7 @@ a:active {
   z-index: 2000;
   background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/navbar.png);
   background-size:cover;
-  filter:brightness(1.1) drop-shadow(-0px -5px 0px #fff) drop-shadow(-0px 5px 0px #ffff) drop-shadow(5px 0px 0px #fff) drop-shadow(-5px 0px 0px #fff) ;
+  filter:brightness(0.98) drop-shadow(-0px -5px 0px #fff) drop-shadow(-0px 5px 0px #ffff) drop-shadow(5px 0px 0px #fff) drop-shadow(-5px 0px 0px #fff) ;
   background-position:center;
   height:175px;
   max-width:1620px;
@@ -378,7 +378,7 @@ transform:scale(1);
 /* ============================================================= */
 
 .footer {
- background-image:url(https://i.postimg.cc/RM56QSMf/IMG-0076.png);
+ background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/footer.png);
 filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -10px 0px #ffafcd) drop-shadow(-101px 80px 80px #d50707) drop-shadow(-101px 100px 80px #010e6c)drop-shadow(0px 10px 40px #010e6c);
   color: #ffdfe8;
   background-size:cover;
