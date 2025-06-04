@@ -30,7 +30,7 @@ body {
   --cd-body-background-color: #d1c3c3;
   --cd-content-background-color: #b375d5;
     --cd-content-background-color-gradient: #754db5;
-    --cd-content-background-color-not-main-card: #e495bf;
+    --cd-content-background-color-not-main-card: #e4959e;
   --cd-faded-background-color: #f8d0d3;
 
   /* Background Extras */
@@ -272,28 +272,31 @@ a:active {
 .navbar {
   font-family: var(--cd-navbar-font-family) !important;
   z-index: 2000;
-  background-image:url(assets/nav-bar.png);
+  background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/nav-bar.png);
   background-size:cover;
+  filter:brightness(1.1) drop-shadow(-0px -5px 0px #fff) drop-shadow(-0px 5px 0px #ffff) drop-shadow(5px 0px 0px #fff) drop-shadow(-5px 0px 0px #fff) ;
   background-position:center;
-  height:215px;
-  max-width:1920px;
+  height:175px;
+  max-width:1620px;
+  
 
   
 }
 
 .navbar .navbar-brand {
-  color: var(--cd-navbar-brand-color) !important;
-  font-size: 2rem;
-  text-shadow:1px 1px 30px #ea4070, 1px 1px 30px #ad14a8;
-  background-color:#c695957a;
-  padding:10px;
-  border-radius:20px;
-  box-shadow:0px 0px 10px #940e5c47
+  color: var(  --cd-content-background-color-gradient);
+  filter:hue-rotate(9deg) brightness(1.3) ;
+  transform:scale(0.9);
+  transition:all 0.2s ease;
+  
 }
+
 
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
-  color: var(--cd-navbar-brand-color-hover) !important;
+filter:hue-rotate(90deg) brightness(1.15) drop-shadow(1px 1px 7px #ffffffe1) opacity(0.5);
+transform:scale(1);
+
 }
 
 .navbar .navbar-nav .nav-link {
@@ -301,13 +304,17 @@ a:active {
   background-color:#ffe8e8e3;
   margin-left:10px;
   border-radius:15px;
-  transition:all 0.2s ease
+  transition:all 0.2s ease;
+      box-shadow:0px 0px 10px #940e5c49
+
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
   color: #c15858 !important;
-   background-color:#ffcecee8;
+   background-color:#ffcece84;
+       box-shadow:0px 0px 10px #940e5c87
+
 }
 
 .navbar .navbar-toggler {
@@ -371,8 +378,14 @@ a:active {
 /* ============================================================= */
 
 .footer {
-  background-color: var(--cd-footer-background-color) !important;
-  color: var(--cd-footer-text-color) !important;
+ background-image:url(https://i.postimg.cc/RM56QSMf/IMG-0076.png);
+filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -10px 0px #ffafcd) drop-shadow(-101px 80px 80px #d50707) drop-shadow(-101px 100px 80px #010e6c)drop-shadow(0px 10px 40px #010e6c);
+  color: #ffdfe8;
+  background-size:cover;
+  background-position:bottom;
+  height:200px;
+  background-repeat:no-repeat
+  
 }
 
 .footer a,
@@ -477,9 +490,10 @@ a:active {
 
 .card {
   background-color: var(--cd-card-background-color) !important;
-  border-width: var(--cd-card-border-width) !important;
-  border-style: var(--cd-card-border-style) !important;
-  border-color: var(--cd-card-border-color) !important;
+ border-top:7px solid #f7b2ff;
+  border-left:7px solid #db9de2;
+   border-right:7px solid #8c0eb2;
+    border-bottom:7px solid #640880;
   border-radius: var(--cd-border-radius) !important;
  background-image:linear-gradient( 135deg, var(--cd-content-background-color) 
   , var(--cd-content-background-color-gradient) 80%)
@@ -505,7 +519,12 @@ a:active {
 
 .card .card {
   background-color:var(--cd-content-background-color-not-main-card) !important;
-  background-image:none
+  background-image:none;
+   border-top:5px solid #a356ba;
+  border-left:5px solid #a356ba;
+   border-right:5px solid #962eb6;
+    border-bottom:5px solid #962eb6;
+ 
 }
 
 
@@ -527,6 +546,11 @@ a:active {
   border-radius: var(--cd-button-border-radius) !important;
 }
 
+
+.nav-item .active {
+  background-image:linear-gradient(335deg, #d06889, #e4a1a1) !important;
+  border:2px solid #810808 !important
+}
 
 
 .btn.btn-primary,
@@ -833,7 +857,33 @@ it work i was never meant for this life chat
     position: -webkit-sticky;
   position: sticky;
   top:3.5rem;
+ background-image:url(https://i.postimg.cc/B6vQ6w25/IMG-0075.png);
+ background-size:cover;
+ background-position:center;
+ height:110px;
+ transform:scale(1.1);
+ font: size 0.9rem;
+ font-weight:900;
+
 }
+
+
+
+@media (max-width:992px) {
+  .sticky-clock {
+ background-position:0px -60px;
+ height:110px;
+ transform:scale(1.2)
+}
+}
+
+.sticky-clock .shell-clock-text  {
+  color: #a41468;
+   background-color:#ffebeb8d;
+   border-radius:20px;
+   box-shadow:1px 1px 10px #c7335f
+}
+
 
 
 
@@ -904,7 +954,19 @@ background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
 
 
 .triangle {
-  background-color:#000
+  background-color:#ee9bc4;
+  z-index:2;
+margin-left:-20px;
+margin-right:20px;
+ 
+}
+
+.triangle-container {
+  z-index:2
+}
+
+.speech-bubble-right {
+  border:9px solid #ee9bc4 !important;
 }
 
 .profile-image {
@@ -973,6 +1035,10 @@ background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
 .bg-pink {
   background-image:linear-gradient(335deg, #d06889, #e4a1a1) !important;
   border-radius:10px;
+   border-top:7px solid #ffc3dd;
+  border-left:7px solid #f0aec0;
+   border-right:7px solid #f07f99;
+    border-bottom:7px solid #c95373;
 }
 
 .bg-pink a {
@@ -985,4 +1051,67 @@ background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
 
 @media (min-width: 992px) {
  
+}
+
+
+.badge-success {
+  background-color:#9bc9e7
+}
+
+.badge-success:hover {
+color:#5370ff
+}
+
+.badge-danger {
+  background-color:#ff5896
+}
+
+.badge-danger:hover {
+color:#b61185
+}
+
+.charadex-gallery-item a{
+  color:#fff !important
+}
+
+.bg-faded .text-primary {
+  color:#fff !important
+}
+
+.charadex-gallery-item a {
+  transition:all ease 0.2s;
+  transform:scale(1)
+}
+
+.charadex-gallery-item a:hover{
+  color:#ffcfcf !important;
+  border:8px solid #f1a8f4;
+  border-top:8px solid #ffe9fd;
+  border-left:8px solid #ffe9fd;
+  background-color:#d88dda !important;
+  background-image:none;
+  filter:drop-shadow(0px 0px 10px #ffd8e0) drop-shadow(0px 0px 20px #ffcbf0);
+  z-index:2;
+  transform:scale(1.0375)
+}
+
+
+.art-container {
+  display: block; /* Ensures container wraps the image neatly */
+  transition: transform 0.3s ease;
+  transform:scale(1.0);
+}
+
+.character-select {
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.art-container:hover {
+  transform: scale(1.03);
+}
+
+.art-container:hover .character-select {
+  transform: scale(1.15); 
+  filter:drop-shadow(0px 0px 5px #c4003163)/* Grow image */;
 }
