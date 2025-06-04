@@ -272,7 +272,7 @@ a:active {
 .navbar {
   font-family: var(--cd-navbar-font-family) !important;
   z-index: 2000;
-  background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/nav-bar.png);
+  background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/navbar.png);
   background-size:cover;
   filter:brightness(1.1) drop-shadow(-0px -5px 0px #fff) drop-shadow(-0px 5px 0px #ffff) drop-shadow(5px 0px 0px #fff) drop-shadow(-5px 0px 0px #fff) ;
   background-position:center;
