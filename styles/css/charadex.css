@@ -236,8 +236,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* Global Background */
-  background-color: var(--cd-body-background-color);
+  background-color:#000;
   background-image: var(--cd-body-background-image);
+  backdrop-filter: blur(3.5px) brightness(0.95) ;
   background-position: bottom;
   background-size: cover;
   background-attachment:fixed;
@@ -278,6 +279,7 @@ a:active {
   background-position:center;
   height:145px;
   max-width:1300px;
+  filter:drop-shadow(0px 0px 10px #81003ebb);
   
 
   
@@ -379,7 +381,7 @@ transform:scale(1);
 
 .footer {
  background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/footer.png);
-filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -10px 0px #ffafcd) drop-shadow(-101px 80px 80px #d50707) drop-shadow(-101px 100px 80px #010e6c)drop-shadow(0px 10px 40px #010e6c);
+filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -3px 0px #ffafcd) drop-shadow(-101px 80px 80px #d50707) drop-shadow(-101px 100px 80px #010e6c)drop-shadow(0px 10px 40px #010e6c);
   color: #ffdfe8;
   background-size:cover;
   background-position:bottom;
@@ -902,12 +904,14 @@ it work i was never meant for this life chat
   background-color:#f6dada!important;
   padding:10px;
   border-radius:10px;
+  box-shadow:0px 0px 10px #6e0575
 }
 
 .sidebar {
    background-color:#f6dada!important;
    border-top-left-radius:10px;
    border-bottom-left-radius:10px;
+   box-shadow:0px 0px 10px #6e0575
 }
 
 .sidebar-section .sidebar-item {
@@ -954,7 +958,7 @@ margin-left:-6%;
  list-style-type: none !important
 }
 .banner {
-background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 90%)
+background-image:linear-gradient(180deg, #ffdfe8,rgba(235,235,235,0) 0%)
 }
 
 #main-container {
@@ -1033,7 +1037,7 @@ margin-right:20px;
 }
 
 .logo {
-  filter:drop-shadow(10px 0px 10px #891d6098)
+  filter:drop-shadow(10px 0px 10px #891d6098) opacity(0.9)
 }
 
 
@@ -1089,6 +1093,10 @@ color:#b61185
   color:#fff !important
 }
 
+.bg-faded {
+  color:#b1497b !important
+}
+
 .charadex-gallery-item a {
   transition:all ease 0.2s;
   transform:scale(1)
@@ -1101,11 +1109,39 @@ color:#b61185
   border-left:8px solid #ffe9fd;
   background-color:#d88dda !important;
   background-image:none;
-  filter:drop-shadow(0px 0px 10px #ffd8e0) drop-shadow(0px 0px 20px #ffcbf0);
+   filter:drop-shadow(0px 0px 5px #720052) drop-shadow(0px 0px 20px #720052a0);
   z-index:2;
   transform:scale(1.0375)
 }
 
+.staff-card {
+  transition:all ease 0.2s
+}
+
+.staff-card  {
+  color:#fff8ff !important
+}
+.staff-card:hover{
+  color:#ffcfcf !important;
+  border:8px solid #f1a8f4;
+  border-top:8px solid #ffe9fd;
+  border-left:8px solid #ffe9fd;
+  background-color:#d88dda !important;
+  background-image:none;
+  filter:drop-shadow(0px 0px 5px #720052) drop-shadow(0px 0px 20px #720052a0);
+  z-index:2;
+  transform:scale(1.0375)
+}
+
+.staff-card:hover a{
+color:#ba3b77;
+font-weight:900
+}
+
+.staff-card:hover a:hover{
+  color:#90305d;
+  
+}
 
 .art-container {
   display: block; /* Ensures container wraps the image neatly */
@@ -1129,4 +1165,18 @@ color:#b61185
 
 .card-header {
   color:#820522 !important
+}
+
+.list-group-item {
+  background-color: var(--cd-faded-background-color);
+}
+
+
+
+.list-group-item a {
+  color:var(--cd-content-background-color-gradient)
+}
+
+.list-group-item a:hover {
+  color:var(--cd-content-background-color)
 }
