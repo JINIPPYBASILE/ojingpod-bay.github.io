@@ -44,7 +44,11 @@ charadex.sheet = {
         species:         "species",
            heritage:         "heritage",
              rarity:         "rarity", 
-             transformations: "transformations"
+             transformations: "transformations", 
+             carouselone: "carouselone", 
+              carouseltwo: "carouseltwo", 
+               carouselthree: "carouselthree"
+             
   },
 
   options: {
@@ -268,6 +272,150 @@ charadex.page.staff = {
   sitePage: 'inventories',
   dexSelector: 'charadex',
   profileProperty: 'username',
+
+  sort: {
+    toggle: false,
+    key: "username",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['Username']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* carouselone
+/* --------------------------------------------------------------- */
+charadex.page.carouselone = {
+
+  sheetPage: charadex.sheet.pages.carouselone,
+  sitePage: 'carouselone',
+  dexSelector: 'charadex',
+  profileProperty: 'carouselone',
+
+  sort: {
+    toggle: false,
+    key: "username",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['Carouselone']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* carouseltwo
+/* --------------------------------------------------------------- */
+charadex.page.carouseltwo = {
+
+  sheetPage: charadex.sheet.pages.carouseltwo,
+  sitePage: 'carouseltwo',
+  dexSelector: 'charadex',
+  profileProperty: 'carouseltwo',
+
+  sort: {
+    toggle: false,
+    key: "username",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['carouseltwo']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* carouselthree
+/* --------------------------------------------------------------- */
+charadex.page.carouselthree = {
+
+  sheetPage: charadex.sheet.pages.carouselthree,
+  sitePage: 'carouselthree',
+  dexSelector: 'charadex',
+  profileProperty: 'carouselthree',
 
   sort: {
     toggle: false,
@@ -893,7 +1041,31 @@ charadex.page.index = {
   designs: {
     ... charadex.page.masterlist,
     dexSelector: 'design',
+    amount: 1,
+  }, 
+
+    carouselone: {
+    ... charadex.page.carouselone,
+    dexSelector: 'carouselone',
     amount: 4,
+  }, 
+    carouseltwo: {
+    ... charadex.page.carouseltwo,
+    dexSelector: 'carouseltwo',
+    amount: 4,
+  }
+,
+
+  carouselthree: {
+    ... charadex.page.carouselthree,
+    dexSelector: 'carouselthree',
+    amount: 4,
+  },
+
+   news: {
+    ... charadex.page.news,
+    dexSelector: 'news',
+    amount: 3,
   }
 
 };

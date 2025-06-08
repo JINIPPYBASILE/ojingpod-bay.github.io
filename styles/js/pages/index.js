@@ -41,6 +41,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   });
 
+   /* Staff
+  ===================================================================== */
+  let carouselone = await charadex.initialize.page(null, charadex.page.index.carouselone, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.index.carouselone.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
+   /* Staff
+  ===================================================================== */
+  let carouseltwo = await charadex.initialize.page(null, charadex.page.index.carouseltwo, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.index.carouseltwo.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
+   /* Staff
+  ===================================================================== */
+  let carouselthree = await charadex.initialize.page(null, charadex.page.index.carouselthree, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.index.carouselthree.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  });
+
+
 
   /* Designs
   ===================================================================== */
@@ -52,6 +85,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   });
 
+
+  
+  /* Designs
+  ===================================================================== */
+  let news = await charadex.initialize.page(null, charadex.page.index.news, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.index.news.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
+  })
 
   /* Load Page
   ===================================================================== */

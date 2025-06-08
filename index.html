@@ -54,6 +54,8 @@
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
+  <div class="load-html" data-source="includes/banner.html"></div>
+  
   <div class="load-html" data-source="includes/header.html"></div>
 
   <!-- --------------------------------------------------------------------
@@ -65,22 +67,15 @@
 
       <!-- Hero Image & Title
       <!-- --------------------------------------------------------------- -->
-      <div class="cd-hero-title mb-4" style="background-image: url('./assets/meta.png');">
-        <div class="m-auto">Charadex</div>
-      </div>
+      <div class="cd-hero-title mb-4" style="background-image: url(https://symprites.com/images/data/awards/16-image.png);">
+        <div class="row no-gutters">
+ <div class="col-lg-8 col-md-12">
+  <div class="m-auto pt-lg-5" >OJINGPODS</div>
+ </div>
+           <div class="col-lg-4">
+                  <div class="row no-gutters col-12  m-n1 mb-n2">
 
-      <!-- Description
-      <!-- --------------------------------------------------------------- -->
-      <div class="px-4 text-muted">
-        <p>Write about your species...</p>
-      </div>
-
-      <!-- Links
-      <!-- --------------------------------------------------------------- -->
-      <hr class="my-4">
-      <div class="row no-gutters m-n1 mb-n2">
-
-        <div class="col-lg-4 p-1">
+        <div class="col-lg-6  p-1">
           <h5>About</h5>
           <div class="px-3">
             <a class="btn btn-primary d-block mb-1" href="world.html">World</a>
@@ -89,7 +84,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 p-1">
+        <div class="col-lg-6  p-1">
           <h5>Community</h5>
           <div class="px-3">
             <a class="btn btn-primary d-block mb-1" href="#">Toyhou.se</a>
@@ -98,16 +93,110 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 p-1">
-          <h5>Resources</h5>
-          <div class="px-3">
-            <a class="btn btn-primary d-block mb-1" href="#">Help Desk</a>
-            <a class="btn btn-primary d-block mb-1" href="faq.html">FAQ</a>
-            <a class="btn btn-primary d-block mb-1" href="terms.html">TOS</a>
-          </div>
-        </div>
+     
 
       </div>
+           </div>
+       
+        </div>
+       
+      </div>
+
+
+
+
+
+  <!-- --------------------------------------------------------------------
+  <-- Carousel and nice-ish introduction
+  <-------------------------------------------------------------------- -->
+<div class="row no-gutters">
+  
+<div class="col-lg-8">
+
+
+  <div id="carouselExampleIndicators" class="carousel slide card" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="secondary-card-header px-3">
+     <h5 class="pt-3">
+    What's Up
+ </h5>
+</div>
+    <div class="carousel-item active">
+      
+       <!-- carouselone
+    <!-- --------------------------------------------------------------- -->
+    <div class="p-0" id="carouselone-gallery">
+   
+      <div class="row no-gutters carouselone-list softload m-n2"></div>
+    </div>
+
+
+    </div>
+    <div class="carousel-item">
+     
+     <!-- carouseltwo
+    <!-- --------------------------------------------------------------- -->
+    <div class="" id="carouseltwo-gallery">
+   
+
+      <div class="row no-gutters carouseltwo-list softload m-n2"></div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      
+
+     <!-- carouselthree
+    <!-- --------------------------------------------------------------- -->
+    <div class="" id="carouselthree-gallery">
+    
+      <div class="row no-gutters carouselthree-list softload m-n2"></div>
+    </div>
+
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      
+
+</div>
+
+
+  <div class="col-lg-4 px-3">
+<div class="card-header ">
+ <h5 class="pt-3">
+    WELCOME TO THE WORLD OF OJINGPODS!
+ </h5>
+
+</div>
+<div class="card-footer bg-pink">
+   <p>"Lorem ipsum dolor sit amet, 
+  consectetur adipiscing elit, sed do
+   eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Ut enim ad minim veniam,
+     quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat.
+       Duis aute irure dolor in reprehenderit in 
+        velit esse cillum dolore eu 
+       fugiat nulla pariatur. 
+       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+  deserunt mollit anim id est laborum."</p>
+</div>
+  </div>
+</div>
+
+ 
 
       <!-- Social Media Links
     <!-- --------------------------------------------------------------- -->
@@ -124,29 +213,59 @@
 
     </div>
       
-    <!-- Designs
-    <!-- --------------------------------------------------------------- -->
-    <div class="card p-md-5 p-4 mb-3" id="design-gallery">
-      <h4 class="mb-0"><a href="masterlist.html">Recent Designs</a></h4>
+    <div class="card p-md-5 p-4 mb-3">
+<div class="row no-gutters">
+      <div class=" col-lg-3 col-6" id="design-gallery">
+      <h4 class="mb-0 secondary-card-header p-3"><a href="masterlist.html">Recent Designs</a></h4>
       <hr>
       <div class="row no-gutters design-list softload m-n2"></div>
     </div>
 
-    <!-- Prompts
-    <!-- --------------------------------------------------------------- -->
-    <div class="card p-md-5 p-4 mb-3" id="prompt-gallery">
-      <h4 class="mb-0"><a href="prompts.html">Prompts</a></h4>
-      <hr>
-      <div class="row no-gutters prompt-list softload m-n2"></div>
-    </div>
 
-    <!-- Staff
-    <!-- --------------------------------------------------------------- -->
-    <div class="card p-md-5 p-4 mb-3" id="staff-gallery">
-      <h4 class="mb-0"><a href="staff.html">Staff</a></h4>
+        <div class=" col-lg-9 col-6 px-3" id="news-gallery" >
+      <h4 class="mb-0 secondary-card-header p-3"><a href="news.html">news</a></h4>
       <hr>
-      <div class="row no-gutters staff-list softload m-n2"></div>
+      <div class="row no-gutters news-list softload m-n2" ></div>
     </div>
+</div>
+
+
+<div class="row no-gutters">
+  <div class="col-lg-3 col-6 p-2 text-center index-image-button">
+    <a href="staff.html">
+      <h5 class="mt-4 mb-n3"><b>Meet the team</b></h5>
+      
+<img src="https://i.postimg.cc/brc9897Z/IMG-0091.png" class="col-12">
+    </a>
+  </div>
+    <div class="col-lg-3 col-6 p-2 text-center index-image-button">
+    <a href="staff.html">
+      <h5 class="mt-4 mb-n3"><b>Meet the team</b></h5>
+      
+<img src="https://i.postimg.cc/hty8hnFW/IMG-0090.png" class="col-12">
+    </a>
+  </div>
+    <div class="col-lg-3 col-6 p-2 text-center index-image-button">
+    <a href="staff.html">
+      <h5 class="mt-4 mb-n3"><b>Meet the team</b></h5>
+      
+<img src="https://i.postimg.cc/brc9897Z/IMG-0091.png" class="col-12">
+    </a>
+  </div>
+    <div class="col-lg-3 col-6 p-2 text-center index-image-button">
+    <a href="staff.html">
+      <h5 class="mt-4 mb-n3"><b>Meet the team</b></h5>
+      
+<img src="https://i.postimg.cc/hty8hnFW/IMG-0090.png" class="col-12">
+    </a>
+  </div>
+</div>
+    </div>
+    <!-- Designs
+    <!-- --------------------------------------------------------------- -->
+
+
+
 
     
   </div>
@@ -168,7 +287,7 @@
 
     <!-- Designs
     <!-- --------------------------------------------------------------- -->
-    <div class="col-md-3 col-sm-6 p-2" id="design-gallery-item">
+    <div class="col-md-12 p-2 art-container" id="design-gallery-item">
       <div class="card bg-faded h-100">
         <div class="card-header bg-faded text-center">
           <h5 class="mb-0">
@@ -176,7 +295,7 @@
           </h5>
         </div>
         <div class="card-body cd-gallery-card d-flex flex-fill">
-          <img class="image img-fluid m-auto" src="" >
+          <img class="image img-fluid m-auto character-select" src="" >
         </div>
         <div class="card-footer bg-faded text-center">
           <a class="owner ownerlink small" href=""></a>
@@ -215,7 +334,82 @@
       </div>
     </div>
 
-  </div>
+     
+     <!-- carouselone
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-12 p-2" id="carouselone-gallery-item">
+      <div class="bg-faded p-3 h-100">
+        <div class="row no-gutters m-n2">
+          <div class="col-12 p-0 ">
+            <img class="image img-thumbnail img-fluid m-auto carousel-background-image" src="">
+          </div>
+          <div class="col-md-12 card p-2 ">
+            <div class="text-truncate">
+              <a class="profileid profilelink"></a>
+            </div>
+            <hr class="my-2">
+            <span class="small information"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--carouseltwo
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-12 p-2" id="carouseltwo-gallery-item">
+      <div class="bg-faded p-3 h-100">
+        <div class="row no-gutters m-n2">
+          <div class="col-12 p-0 ">
+            <img class="image img-thumbnail img-fluid m-auto carousel-background-image" src="">
+          </div>
+          <div class="col-md-12 card p-2 ">
+            <div class="text-truncate">
+              <a class="profileid profilelink"></a>
+            </div>
+            <hr class="my-2">
+            <span class="small information"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- carouselthree
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-12 p-2" id="carouselthree-gallery-item">
+      <div class="bg-faded p-3 h-100">
+        <div class="row no-gutters m-n2">
+          <div class="col-12 p-0 ">
+            <img class="image img-thumbnail img-fluid m-auto carousel-background-image" src="">
+          </div>
+          <div class="col-md-12 card p-2 ">
+            <div class="text-truncate">
+              <a class="profileid profilelink"></a>
+            </div>
+            <hr class="my-2">
+            <span class="small information"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+      <!-- news
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-md-12 p-0 " id="news-gallery-item">
+      <div class="p-3 h-100">
+        <div class="row no-gutters m-n2">
+          <div class="col-md-12 staff-card card bg-faded p-2 ">
+            <div class="text-truncate">
+              <a class="profileid profilelink"></a>
+            </div>
+            <hr class="my-2">
+            <span class="small shortscription"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   <!-- ----------------------------------------------------------------- -->
   <!-- JS                                                                -->

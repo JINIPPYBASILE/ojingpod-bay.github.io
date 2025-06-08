@@ -280,11 +280,27 @@ a:active {
   height:145px;
   max-width:1300px;
   filter:drop-shadow(0px 0px 10px #81003ebb);
-  
 
-  
 }
 
+
+@media (max-width:768px) {
+.navbar .navbar-collapse  {
+background-image:linear-gradient( #ffffff00, #fff 7.5%, #ffe4e4 80%);
+  border-radius: 0 0 calc(var(--cd-border-radius) - 4.5px) calc(var(--cd-border-radius) - 4.5px)  !important;
+margin-top:-12.75%;
+padding-top:12%;
+
+}
+
+
+
+.navbar .dropdown-menu {
+
+background-image:none !important;
+}
+
+}
 .navbar .navbar-brand {
   color: var(  --cd-content-background-color-gradient);
   filter:hue-rotate(9deg) brightness(1.3) ;
@@ -303,16 +319,15 @@ transform:scale(1);
 
 .navbar .navbar-nav .nav-link {
   color: var(--cd-navbar-link-color) !important;
-  background-color:#ffe8e8e3;
   margin-left:10px;
   border-radius:15px;
   transition:all 0.2s ease;
-      box-shadow:0px 0px 10px #940e5c49
 
 }
 
 .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link:focus {
+.navbar .navbar-nav .nav-link:focus, 
+.navbar .navbar-nav .nav-link:active {
   color: #c15858 !important;
    background-color:#ffcece84;
        box-shadow:0px 0px 10px #940e5c87
@@ -321,7 +336,16 @@ transform:scale(1);
 
 .navbar .navbar-toggler {
   color: var(--cd-navbar-link-color) !important;
-  border: none !important;
+  border: none ;
+  transition:all 0.2s ease;
+}
+
+
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus, 
+.navbar .navbar-toggler:active  {
+  border:1px solid #cf8383 !important;
+    background-color:#ffcece84;
 }
 
 .navbar .nav-link {
@@ -343,7 +367,9 @@ transform:scale(1);
 .navbar .dropdown-menu {
   color: var(--cd-navbar-dropdown-link-color) !important;
   border-radius: var(--cd-navbar-dropdown-border-radius) !important;
-
+background-image:url(https://jinippybasile.github.io/ojingpod-bay.github.io/assets/navbar.png);
+background-position:bottom;
+background-size:2500px;
   border: none;
   margin-top: 0;
 }
@@ -492,7 +518,7 @@ filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -3px 0px #ffafcd)
 
 .card {
   background-color: var(--cd-card-background-color) !important;
- border-top:7px solid #f7b2ff;
+ border-top:7px solid #eeb0d1;
   border-left:7px solid #db9de2;
    border-right:7px solid #8c0eb2;
     border-bottom:7px solid #640880;
@@ -507,7 +533,17 @@ filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -3px 0px #ffafcd)
   border-bottom-width: var(--cd-card-border-width) !important;
   border-bottom-style: var(--cd-card-border-style) !important;
   font-family: var(--cd-card-header-font-family) !important;
-  border-radius: calc(var(--cd-border-radius) - 1px) calc(var(--cd-border-radius) - 1px) 0 0 !important;
+  border-radius: calc(var(--cd-border-radius) - 4.5px) calc(var(--cd-border-radius) - 4.5px) 0 0 !important;
+}
+
+
+.secondary-card-header {
+  background-color: #d57e89;
+  border-bottom-color: var(--cd-card-border-color) !important;
+  border-bottom-width: var(--cd-card-border-width) !important;
+  border-bottom-style: var(--cd-card-border-style) !important;
+  font-family: var(--cd-card-header-font-family) !important;
+  border-radius: calc(var(--cd-border-radius) - 4.5px) calc(var(--cd-border-radius) - 4.5px) 0 0 !important;
 }
 
 .card-footer {
@@ -516,7 +552,15 @@ filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -3px 0px #ffafcd)
   border-top-width: var(--cd-card-border-width) !important;
   border-top-style: var(--cd-card-border-style) !important;
   font-family: var(--cd-card-header-font-family) !important;
-  border-radius: 0 0  calc(var(--cd-border-radius) - 1px) calc(var(--cd-border-radius) - 1px) !important;
+  border-radius: 0 0  calc(var(--cd-border-radius) - 4.5px) calc(var(--cd-border-radius) - 4.5px) !important;
+}
+
+.card-footer a {
+  color:#322e7a
+}
+
+.card-footer a:hover {
+color:#421957
 }
 
 .card .card {
@@ -528,6 +572,16 @@ filter:drop-shadow(-101px 100px 80px #173dff) drop-shadow(-0px -3px 0px #ffafcd)
     border-bottom:5px solid #962eb6;
  
 }
+
+.card .card a {
+color:#322e7a
+}
+
+.card .card a:hover {
+color:#421957
+}
+
+
 
 .card .card .card {
   background-color:#ffdada !important;
@@ -804,7 +858,7 @@ p:last-child {
 
 /* For the hero image in the index */
 .cd-hero-title {
-  color: var(--cd-primary-color);
+  color: #d45b9b;
   background-color: var(--cd-faded-background-color);
   border-radius: var(--cd-border-radius);
   font-family: var(--cd-header-font-family);
@@ -1057,7 +1111,7 @@ margin-right:20px;
 }
 
 .bg-pink a {
-  color:#b3dcf1
+  color:#c5ecff
 }
 
 .bg-pink a:hover {
@@ -1145,7 +1199,7 @@ font-weight:900
 
 .art-container {
   display: block; /* Ensures container wraps the image neatly */
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   transform:scale(1.0);
 }
 
@@ -1155,7 +1209,9 @@ font-weight:900
 
 /* Hover effect */
 .art-container:hover {
-  transform: scale(1.03);
+  transform: scale(1.0375);
+  filter:drop-shadow(0px 0px 5px #720052) drop-shadow(0px 0px 20px #720052a0);
+  z-index:2
 }
 
 .art-container:hover .character-select {
@@ -1179,4 +1235,30 @@ font-weight:900
 
 .list-group-item a:hover {
   color:var(--cd-content-background-color)
+}
+
+
+.carousel-background-image {
+  max-height:450px !important
+}
+.secondary-card-header a {
+  color:#edc6ed
+}
+
+.secondary-card-header a:hover {
+  color:#fff8ff
+}
+
+.index-image-button {
+  transition:all 0.2s ease
+}
+
+.index-image-button:hover {
+  transform:scale(1.0975) rotate(2.0375deg);
+    filter:drop-shadow(0px 0px 5px #720052) drop-shadow(0px 0px 20px #720052a0);
+}
+
+.index-image-button h5 {
+  text-shadow:0px 0px 5px #720052;
+  z-index:2
 }
