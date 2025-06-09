@@ -366,7 +366,7 @@ charadex.page.carouselone = {
 charadex.page.featured = {
 
   sheetPage: charadex.sheet.pages.featured,
-  sitePage: 'featured',
+  sitePage: 'masterlist',
   dexSelector: 'charadex',
   profileProperty: 'design',
 
