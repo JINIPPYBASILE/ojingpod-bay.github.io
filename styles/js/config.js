@@ -47,7 +47,8 @@ charadex.sheet = {
              transformations: "transformations", 
              carouselone: "carouselone", 
               carouseltwo: "carouseltwo", 
-               carouselthree: "carouselthree"
+               carouselthree: "carouselthree", 
+               featured: "featured"
              
   },
 
@@ -351,6 +352,54 @@ charadex.page.carouselone = {
     toggle: true,
     filterToggle: false,
     parameters: ['Carouselone']
+  },
+
+  prevNext: {
+    toggle: false,
+  },
+
+};
+
+
+/* featured
+/* --------------------------------------------------------------- */
+charadex.page.featured = {
+
+  sheetPage: charadex.sheet.pages.featured,
+  sitePage: 'featured',
+  dexSelector: 'charadex',
+  profileProperty: 'design',
+
+  sort: {
+    toggle: false,
+    key: "username",
+    order: "asc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: false,
+    bottomToggle: false,
+    amount: 12,
+  },
+
+  filters: {
+    toggle: false,
+    parameters: {
+      'TBA': [],
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: false,
+    parameters: ['design']
   },
 
   prevNext: {
@@ -899,6 +948,9 @@ charadex.page.masterlist = {
 
 };
 
+
+
+
 /* Inventory
 /* --------------------------------------------------------------- */
 charadex.page.inventory = {
@@ -1066,8 +1118,12 @@ charadex.page.index = {
     ... charadex.page.news,
     dexSelector: 'news',
     amount: 3,
+  }, 
+  featured: {
+    ... charadex.page.featured,
+    dexSelector: 'featured',
+    amount: 3,
   }
-
 };
 
 

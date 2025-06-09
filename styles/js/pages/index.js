@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   
-  /* Designs
+  /* news
   ===================================================================== */
   let news = await charadex.initialize.page(null, charadex.page.index.news, (arr) => {
     
@@ -95,7 +95,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     let sliceAmount = charadex.page.index.news.amount || 6;
     arr.splice(sliceAmount, arr.length);
 
+  });
+
+
+
+    
+  /* Designs
+  ===================================================================== */
+  let featured = await charadex.initialize.page(null, charadex.page.index.featured, (arr) => {
+    
+    // Splice the silly little array
+    let sliceAmount = charadex.page.index.featured.amount || 6;
+    arr.splice(sliceAmount, arr.length);
+
   })
+
 
   /* Load Page
   ===================================================================== */
