@@ -625,7 +625,8 @@ color:#421957
   color: var(--cd-button-text-color) !important;
   background-color: var(--cd-button-background-color) !important;
  border:5px solid #ffecec;
- filter:drop-shadow(5px 5px 0px #ad1c51)
+ filter:drop-shadow(5.5px 5.5px 0px #ad1c51);
+ transition:all 0.2s ease
 }
 
 .btn.btn-primary:hover,
@@ -638,6 +639,9 @@ a.badge.badge-primary:active {
  border:5px solid #ad1c51;
   background-color: var(--cd-button-background-color-hover) !important;
   box-shadow: none !important;
+   filter:drop-shadow(2.9px 2.9px 0px #ad1c51);
+   transform:translate(3px, 3px)
+  
 }
 
 /* ============================================================= */
@@ -859,20 +863,18 @@ p:last-child {
 /* For the hero image in the index */
 .cd-hero-title {
   color: #d45b9b;
-  background-color: var(--cd-faded-background-color);
   border-radius: var(--cd-border-radius);
   font-family: var(--cd-header-font-family);
-  display: flex;
-  padding: 1.5rem;
-  min-height: 250px;
+  text-align:center;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  background-size:cover;
+  background-image: url(https://symprites.com/images/data/awards/16-image.png) !important;
 }
 
 @media (min-width: 768px) {
   .cd-hero-title {
-    letter-spacing: 2px;
-    font-size: 5rem;
+    font-size: 3.65rem;
   }
 }
 
@@ -1263,6 +1265,3 @@ font-weight:900
   z-index:2
 }
 
-p {
-  font-size:14px
-}

@@ -230,7 +230,7 @@ charadex.page.news = {
   sort: {
     toggle: true,
     key: "enddate",
-    order: "asc",
+    order: "desc",
     parameters: []
   },
 
