@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- About Your Site                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+  <title>Charadex Inventories</title>
+  <meta name="title" content="Charadex Inventories" />
+  <meta name="type" content="website" />
+  <meta name="url" content="https://www.charadex.com/" />
+  <meta name="image" content="assets/meta.png" />
+  <meta name="description" content="A tool for organizing small ARPGs and species.">
+
+  <!-- No AI scraping directives -->
+  <meta name="robots" content="noai">
+  <meta name="robots" content="noimageai">
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Styles                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Bootstrap CSS -->
+  <!-- Using Bootstrap 4.5 because its closest to Toyhou.se's current version -->
+  <!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <!-- Multiselect CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Optional Styles                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/css/charadex.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:500" rel="stylesheet">
+
+
+</head>
+
+<body id="charadex-body">
+
+  <!-- --------------------------------------------------------------------
+  <-- Header
+  <-------------------------------------------------------------------- -->
+    <div class="load-html" data-source="includes/banner.html"></div>
+
+  <div class="load-html" data-source="includes/header.html"></div>
+
+  <!-- --------------------------------------------------------------------
+  <-- Main List
+  <-------------------------------------------------------------------- -->
+  <div class="container" id="main-container">
+
+
+    <!-- Gallery Container
+    <!-- -------------------------------------------------------------- -->
+<div class="row no-gutters">
+
+  <div class="col-lg-2">
+    <div class="load-html" data-source="includes/clock.html"></div>
+       <div class="load-html" data-source="includes/usersidebar.html"></div>
+  </div>
+  <div class="col-lg-10">
+        <div id="charadex-gallery">
+
+
+      <!-- Filters
+      ----------------------------------------------------------------- -->
+      <div class="card p-md-5 p-4 mb-4 bg-pink">
+
+        <h3 class="mb-0"><a href="register.html">Register</a></h3>
+    What are the benefits of registering? List them here. or ikd lol because i am tired 
+    as frick and want to sleep
+
+        <!-- Faux Folders
+        --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-folder-container">
+          
+          <hr>
+          <div class="row no-gutters m-n1" id="charadex-folders"></div>
+          <!-- Buttons -->
+          <div style="display:none;">
+            <div class="col-lg-3 col-md-4 col-sm-6 p-1" id="charadex-folder">
+              <a class="btn btn-primary d-block" href=""></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters
+        <!-- --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-filter-container">
+          
+          <hr>
+          <div class="row no-gutters m-n1" id="charadex-filters"></div>
+          <!-- Filters -->
+          <div style="display: none;">
+            <div class="col-md-4 col-12 p-1" id="charadex-filter">
+              <label class="px-2"></label>
+              <select class="form-control" multiple></select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search
+        <!-- --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-search-container">
+     
+          <hr>
+          <div class="row no-gutters m-n1">
+            <!-- Search Filter -->
+            <div class="col-md-4 col-6 p-1" style="display: none;">
+              <select class="form-control" id="charadex-search-filter"></select>
+            </div>
+            <!-- Search Bar -->
+            <div class="col d-flex p-1">
+              <input class="form-control search" type="search" placeholder="Search" id="charadex-search">
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination
+        <!-- --------------------------------------------------------------- -->
+        <div style="display: none;" class="charadex-pagination-container">
+          <hr class="mb-4 mt-4">
+          <div class="nav d-flex justify-content-center mb-n4">
+            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+            <ul class="pagination charadex-pagination charadex-pagination-top justify-content-center m-0"></ul>
+            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+          </div>
+              <!-- Guideline
+        <!-- --------------------------------------------------------------- -->
+<hr class="mt-5 mx-n5">
+  <div class="row no-gutters mx-n4">
+  <div class="col-4 "><span class="ml-lg-0 ml-3">Username</span></div>
+    <div class="col-4 ">Primary Alias</div>
+      <div class="col-2">Rank</div>
+        <div class="col-2">Joined</div>
+  </div>
+  <hr class="mb-n4 mx-n5">
+
+        </div>
+
+        <!-- Prev & Next Topbar
+        <!-- --------------------------------------------------------------- -->
+        <div style="display: none;" id="charadex-prevnext-container">
+          <hr>
+          <div class="row no-gutters px-2 text-uppercase">
+            <div class="col-6 px-1">
+              <a id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
+            </div>
+            <div class="col-6 px-1 text-right order-md-1">
+              <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
+            </div>
+          </div>
+          
+        </div>
+        
+      
+      </div>
+    
+
+      <!-- List Items Render Here
+      ----------------------------------------------------------------- -->
+      <div class="row no-gutters charadex-list softload m-n1"></div>
+
+      <!-- Pagination
+      <!-- --------------------------------------------------------------- -->
+      <div style="display: none;" class="charadex-pagination-container">
+        <div class="card px-3 py-1 mt-4 bg-pink">
+          <div class="nav d-flex justify-content-center">
+            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+            <ul class="pagination charadex-pagination charadex-pagination-bottom justify-content-center m-0"></ul>
+            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+          </div>
+        </div>
+      </div>
+<div class="Uc2NEf">
+    <div jscontroller="rYNGv" jsaction="JIbuQc:KjsqPd" class="HMRMj">
+        <div role="button" class="uArJ5e cd29Sd UQuaGc YhQJj U1dMdf ctEux csJMfd" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" jsname="CHu7sb" aria-label="Edit this form" tabindex="0" data-tooltip="Edit this form" data-redirect-url="https://docs.google.com/forms/d/1QALWfhCz1IlAYh97x8QNdho8Lw7Ff1gX1W_qsoTClo4/edit?usp=sharing" data-target="_self" data-tooltip-position="top" data-tooltip-vertical-offset="12" data-tooltip-horizontal-offset="0"><div class="Fvio9d MbhUzd" jsname="ksKsZd"></div><div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue cd29Sd"><span class="E6FpNe Ce1Y1c"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="PgdKqf" d="M20.41 4.94l-1.35-1.35c-.78-.78-2.05-.78-2.83 0L13.4 6.41 3 16.82V21h4.18l10.46-10.46 2.77-2.77c.79-.78.79-2.05 0-2.83zm-14 14.12L5 19v-1.36l9.82-9.82 1.41 1.41-9.82 9.83z"></path><path fill="none" d="M0 0h24v24H0V0z"></path></svg></span></span></div></div><div class="vnFTpb teQAzf ErmvL KHCwJ"></div><div class="teQAzf"><form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfCKLNbbj5rcCjsbJWN_v0cOnDddhr7RrFZRmgv5jueNFfAtA/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc" data-shuffle-seed="-3088135220323164170" data-clean-viewform-url="https://docs.google.com/forms/d/e/1FAIpQLSfCKLNbbj5rcCjsbJWN_v0cOnDddhr7RrFZRmgv5jueNFfAtA/viewform?usp=sharing" data-response="%.@.]" data-dlp-data="%.@.null,false]" data-first-entry="0" data-last-entry="3" data-is-first-page="true"><div jscontroller="yUS4Lc" jsaction="rcuQ6b:rcuQ6b;UxRBlf:rcuQ6b;"><div jsname="o6bZLc"><input type="hidden" name="entry.1953178790" value=""><input type="hidden" name="entry.286799492" value=""><input type="hidden" name="entry.75100591" value=""></div></div><div class="RH5hzf RLS9Fe"><div class="lrKTG"><div class="Dq4amc"><div class="m7w29c O8VmIc tIvQIf"><noscript><div class="HB1eCd-X3SwIb-haAclf"><div class="HB1eCd-X3SwIb-i8xkGf"><div class="tk3N6e-cXJiPb tk3N6e-cXJiPb-TSZdd tk3N6e-cXJiPb-GMvhG">JavaScript isn't enabled in your browser, so this file can't be opened. Enable and reload.</div></div><br></div></noscript><div class="JH79cc RVEQke b33AEc"></div><div class="N0gd6"><div class="ahS2Le"><div class="F9yp7e ikZYwf LgNcQe" dir="auto" role="heading" aria-level="1">Registration form test<span></span></div></div><div class="cBGGJ OIC90c" dir="auto">this is a test :&gt; I need to lock in lol</div><div jsname="F0H8Yc" class="liS6Hc"></div></div><div class="zAVwcb"></div><div class="DqBBlb"><div class="Oh1Vtf"><div class="tMRmsd" id="wSDd7b"><div class="ut7aeb"><div class="eAQI0e"><span class="EbMsme">verabaego@gmail.com</span> <a href="https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/e/1FAIpQLSfCKLNbbj5rcCjsbJWN_v0cOnDddhr7RrFZRmgv5jueNFfAtA/viewform?usp%3Dsharing&amp;service=wise" aria-describedby="wSDd7b" class="jZZ5Nd">Switch account</a></div></div><div class="ut7aeb KA8vlc"></div></div><div class="UpwdYb" jscontroller="rmdjlf" jsaction="rcuQ6b:npT2md; click:xdDXgc;"><div class="foqfDc gdyQ3c"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc-BvMwwf" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc-AhqUyc" aria-hidden="true">&nbsp;</div><div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc" aria-hidden="true">&nbsp;</div></div></div></div><div class="zAVwcb"></div><div class="md0UAd" aria-hidden="true" dir="auto">* Indicates required question</div></div></div></div><div class="o3Dpx" role="list"><div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n QztlMc"><div jscontroller="eMUE0e" jsaction="rcuQ6b:vZc4S;JIbuQc:jsfc1c;b2trFe:eVidQc;" data-user-email-address="verabaego@gmail.com"><div class="z12JJ"><div class="HoXoMd D1wxyf RjsPE" dir="auto" role="heading" aria-level="3"><span class="M7eMe">Email</span><span class="vnumgf" id="i4" aria-label="Required question"> *</span></div></div><label for="i5" class="docssharedWizToggleLabeledContainer OLkl6c"><div class="bzfPab wFGF8"><div id="i5" class="uVccjd aiSeRd FXLARc wGQFbe oLlshd" jscontroller="EcW08c" jsaction="keydown:I481le;dyRcpb:dyRcpb;click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow="" jsname="MPu53c" aria-label="Record verabaego@gmail.com as the email to be included with my response" tabindex="0" role="checkbox" aria-checked="false"><div class="PkgjBf MbhUzd"></div><div class="uHMk6b fsHoPb"></div><div class="rq8Mwb"><div class="TCA6qd"><div class="MbUTNc oyD5Oc"></div><div class="Ii6cVc oyD5Oc"></div></div></div></div><div class="YEVVod"><div class="ulDsOb"><span dir="auto" class="aDTYNe snByac">Record <span class="Z5Tv0">verabaego@gmail.com</span> as the email to be included with my response</span></div></div></div></label></div><div jsname="Rfh2Tc" class="SL4Sz" id="i3" role="alert"></div></div><div class="Qr7Oae" role="listitem"><div jsmodel="CP1oW" data-params="%.@.[657767126,&quot;Username&quot;,null,0,[[1953178790,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;Username&quot;]],&quot;i8&quot;,&quot;i9&quot;,&quot;i10&quot;,false,&quot;i11&quot;]"><div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n"><div class="z12JJ"><div class="M4DNQ"><div id="i8" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span class="M7eMe">Username</span></div><div class="gubaDc OIC90c RjsPE" id="i9"></div></div></div><div jscontroller="oCiKKc" jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb"><div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input type="text" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i8 i11" aria-describedby="i9 i10" aria-disabled="false" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">Your answer</div></div><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div><div jsname="Rfh2Tc" class="SL4Sz" id="i10" role="alert"></div></div></div></div><div class="Qr7Oae" role="listitem"><div jsmodel="CP1oW" data-params="%.@.[2075112224,&quot;Image link&quot;,null,0,[[286799492,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;Image link&quot;]],&quot;i13&quot;,&quot;i14&quot;,&quot;i15&quot;,false,&quot;i16&quot;]"><div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n"><div class="z12JJ"><div class="M4DNQ"><div id="i13" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span class="M7eMe">Image link</span></div><div class="gubaDc OIC90c RjsPE" id="i14"></div></div></div><div jscontroller="oCiKKc" jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb"><div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input type="text" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i13 i16" aria-describedby="i14 i15" aria-disabled="false" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">Your answer</div></div><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div><div jsname="Rfh2Tc" class="SL4Sz" id="i15" role="alert"></div></div></div></div><div class="Qr7Oae" role="listitem"><div jsmodel="CP1oW" data-params="%.@.[1468442363,&quot;Description&quot;,null,1,[[75100591,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;Description&quot;]],&quot;i18&quot;,&quot;i19&quot;,&quot;i20&quot;,false,&quot;i21&quot;]"><div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n"><div class="z12JJ"><div class="M4DNQ"><div id="i18" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span class="M7eMe">Description</span></div><div class="gubaDc OIC90c RjsPE" id="i19"></div></div></div><div jscontroller="oCiKKc" jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb"><div class="edhGSc zKHdkd kRy7qc RdH0ib yqQS1" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="RpC4Ne oJeWuf"><div class="F1pOBe snByac" aria-hidden="true" jsname="LwH6nd">Your answer</div><div class="Pc9Gce Wic03c"><textarea class="KHxj8b tL9Q4c" jsname="YPqjbf" data-rows="1" tabindex="0" aria-label="Your answer" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" dir="auto" data-initial-dir="auto" data-initial-value="" aria-labelledby="i18 i21" aria-describedby="i19 i20" style="height: 24px;" aria-disabled="false"></textarea></div><div class="z0oSpf mIZh1c"></div><div jsname="XmnwAc" class="Bfurwb cXrdqd"></div></div><div class="jE8NUc"><div jsname="ty6ygf" class="YElZX Is7Fhb"></div></div></div></div><div jsname="Rfh2Tc" class="SL4Sz" id="i20" role="alert"></div></div></div></div></div><div class="ThHDze" jscontroller="lSvzH" jsaction="rcuQ6b:npT2md;JIbuQc:qV61Ff(X5DuWc),Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe); keydown:duASZc" data-shuffle-seed="-3088135220323164170" data-should-execute-invisible-captcha-on-form-submit="false" data-is-receipt-checked="false"><div class="DE3NNc CekdCb"><div class="lRwqcd"><div role="button" class="uArJ5e UQuaGc Y5sE8d VkkpIf QvWxOd" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" jsname="M2UYVd" aria-label="Submit" tabindex="0"><div class="Fvio9d MbhUzd" jsname="ksKsZd"></div><div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue"><span class="NPEfkd RveJvd snByac">Submit</span></span></div></div><div class="nYdzXd"><div role="button" class="uArJ5e UQuaGc kCyAyd l3F1ye TFBnVe" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" jsname="X5DuWc" tabindex="0"><div class="Fvio9d MbhUzd" jsname="ksKsZd"></div><div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue"><span class="NPEfkd RveJvd snByac">Clear form</span></span></div></div></div><div class="T2dutf">Never submit passwords through Google Forms.</div></div><input type="hidden" name="fvv" value="1"><input type="hidden" name="partialResponse" value="[null,null,&quot;-3088135220323164170&quot;]"><input type="hidden" name="pageHistory" value="0"><input type="hidden" name="token" value="oGM1U5cBAAA.vZzux973ywiYlN-W3XggHg.J6AV1_2u6xYKF4Mxdx3XTQ"><input type="hidden" name="fbzx" value="-3088135220323164170"><input type="hidden" name="submissionTimestamp" value="-1"></div></div></form><div><div class="v1CNvb sId0Ce">This content is neither created nor endorsed by Google.  - <a jsname="FqYDPb" jscontroller="KFVhZe" jsaction="click:jwOTSd;" data-user-email-address="verabaego@gmail.com" data-user-display-name="Vera Go" class="KQzYbf">Contact form owner</a>  - <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> - <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a><p>Does this form look suspicious? <a href="reportabuse" target="_blank">Report</a></p></div><div class="I3zNcc yF4pU"><a dir="auto" href="//www.google.com/forms/about/?utm_source=product&amp;utm_medium=forms_logo&amp;utm_campaign=forms"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg" alt="Google" height="24px" width="74px">&nbsp;<span class="sUXvCd">Forms</span></a></div></div></div><div jscontroller="KFVhZe" jsaction="rcuQ6b:npT2md;FzgWvd:PSl28c;iFFCZc:Y0y4c;" data-report-abuse-url="reportabuse" data-user-email-address="verabaego@gmail.com" data-user-display-name="Vera Go" data-should-open-contact-owner-dialog="false" data-sign-in-url-for-contact-owner="https://accounts.google.com/Login?continue=https://docs.google.com/forms/d/e/1FAIpQLSfCKLNbbj5rcCjsbJWN_v0cOnDddhr7RrFZRmgv5jueNFfAtA/viewform?usp%3Dsharing%26socod%3Dtrue&amp;service=wise" class="wJFUN"><div class="VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd" jscontroller="wg1P6b" jsaction="JIbuQc:aj0Jcf(WjL7X); keydown:uYT2Vb(WjL7X);xDliB:oNPcuf;SM8mFd:li9Srb;iFFCZc:NSsOUb;Rld2oe:NSsOUb" jsname="hTYMre" jsshadow="" data-is-menu-hoisted="true"><div jsname="WjL7X" jsslot=""><span data-is-tooltip-wrapper="true"><button class="VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ mN1ivc" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;" data-idom-class="yHy1rc eT1oJ mN1ivc" jsname="LW2oUc" aria-label="help and feedback" data-tooltip-enabled="true" data-tooltip-id="tt-i23" aria-expanded="false" aria-haspopup="menu"><div jsname="s3Eaab" class="VfPpkd-Bz112c-Jh9lGc"></div><div class="VfPpkd-Bz112c-J1Ukfc-LhBDec"></div><div class="foqfDc gdyQ3c"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-h9d3hd-i5vt6e-BvMwwf" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-h9d3hd-i5vt6e-AhqUyc" aria-hidden="true">&nbsp;</div><div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-h9d3hd-i5vt6e" aria-hidden="true">&nbsp;</div></div></button><div class="EY8ABd-OWXEXe-TAWMXe" id="tt-i23" role="tooltip" aria-hidden="true">Help and feedback</div></span></div><div jsname="U0exHf" jsslot=""> <div class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf" jscontroller="ywOR5c" jsaction="keydown:I481le;JIbuQc:j697N(rymPhb);XVaHYd:c9v4Fb(rymPhb);Oyo5M:b5fzT(rymPhb);DimkCe:TQSy7b(rymPhb);m0LGSd:fAWgXe(rymPhb);WAiFGd:kVJJuc(rymPhb);" data-is-hoisted="true" data-should-flip-corner-horizontally="false" data-stay-in-viewport="false" data-menu-uid="ucj-1"><ul class="VfPpkd-StrnGf-rymPhb DMZ54e" jsname="rymPhb" jscontroller="PHUIyb" jsaction="mouseleave:JywGue; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; keydown:I481le;" role="menu" tabindex="-1" aria-label="Help and feedback" data-use-updated-list-item-action-event="true" data-disable-idom="true"><span class="VfPpkd-BFbNVe-bF1uUb NZp2ef" aria-hidden="true"></span><li class=" VfPpkd-StrnGf-rymPhb-ibnC6b" jsaction=" keydown:RDtNu; keyup:JdS61c; click:o6ZaF; mousedown:teoBgf; mouseup:NZPHBc; mouseleave:xq3APb; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8;focusin:MeMJlc; focusout:bkTmIf;mouseenter:SKyDAe; change:uOgbud;" role="menuitem" jsname="yKLRBb" tabindex="-1"><span class="VfPpkd-StrnGf-rymPhb-pZXsl"></span><span class="VfPpkd-StrnGf-rymPhb-Zmlebc-LhBDec"></span><span class=" VfPpkd-StrnGf-rymPhb-f7MjDc"><div class="foqfDc gdyQ3c"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-xvr5H-BvMwwf" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-xvr5H-AhqUyc" aria-hidden="true">&nbsp;</div><div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-xvr5H" aria-hidden="true">&nbsp;</div></div></span><span jsname="K4r5Ff" class="VfPpkd-StrnGf-rymPhb-b9t22c">Contact form owner</span></li><li class=" VfPpkd-StrnGf-rymPhb-clz4Ic" role="separator"></li><li class=" VfPpkd-StrnGf-rymPhb-ibnC6b" jsaction=" keydown:RDtNu; keyup:JdS61c; click:o6ZaF; mousedown:teoBgf; mouseup:NZPHBc; mouseleave:xq3APb; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8;focusin:MeMJlc; focusout:bkTmIf;mouseenter:SKyDAe; change:uOgbud;" role="menuitem" jsname="QE0zbc" tabindex="-1"><span class="VfPpkd-StrnGf-rymPhb-pZXsl"></span><span class="VfPpkd-StrnGf-rymPhb-Zmlebc-LhBDec"></span><span class=" VfPpkd-StrnGf-rymPhb-f7MjDc"><div class="foqfDc gdyQ3c"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-N7Eqid-XkWAb-BvMwwf" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-N7Eqid-XkWAb-AhqUyc" aria-hidden="true">&nbsp;</div><div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-N7Eqid-XkWAb" aria-hidden="true">&nbsp;</div></div></span><span jsname="K4r5Ff" class="VfPpkd-StrnGf-rymPhb-b9t22c">Help Forms improve</span></li><li class=" VfPpkd-StrnGf-rymPhb-ibnC6b" jsaction=" keydown:RDtNu; keyup:JdS61c; click:o6ZaF; mousedown:teoBgf; mouseup:NZPHBc; mouseleave:xq3APb; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8;focusin:MeMJlc; focusout:bkTmIf;mouseenter:SKyDAe; change:uOgbud;" role="menuitem" jsname="DITn2" tabindex="-1"><span class="VfPpkd-StrnGf-rymPhb-pZXsl"></span><span class="VfPpkd-StrnGf-rymPhb-Zmlebc-LhBDec"></span><span class=" VfPpkd-StrnGf-rymPhb-f7MjDc"><div class="foqfDc gdyQ3c"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-uQPRwe-BvMwwf" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-uQPRwe-AhqUyc" aria-hidden="true">&nbsp;</div><div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-uQPRwe" aria-hidden="true">&nbsp;</div></div></span><span jsname="K4r5Ff" class="VfPpkd-StrnGf-rymPhb-b9t22c">Report</span></li></ul></div></div></div></div></div>
+    </div>
+  </div>
+  
+</div>
+
+  </div>
+
+
+
+  <!-- --------------------------------------------------------------------
+    <-- Footer
+    <-------------------------------------------------------------------- -->
+
+  <div class="load-html" data-source="includes/footer.html"></div>
+
+
+
+  <!-- --------------------------------------------------------------------
+  <-- Repeat Items
+  <-- Do not remove 'display:none;'
+  <-------------------------------------------------------------------- -->
+  <div style="display:none;">
+
+
+    <!-- Gallery Items
+    <!-- ------------------------------------------------------------------- -->
+    <div class="col-lg-12 p-1 charadex-gallery-item" id="charadex-gallery-item">
+      <a class="card px-4 py-3 profilelink text-truncate" href="">
+ 
+      <div class="row no-gutters user-card-preview">
+      <div class="col-4">   <h6 class="m-0"><span class="profileid"></span></h6></div>
+      <div class="col-4">  <h6 class="m-0"><span class="alias"></span></h6></div>
+      <div class="col-2">  <h6 class="m-0"><span class="rank"></span></h6></div>
+      <div class="col-2">  <h6 class="m-0"><span class="joindate"></span></h6></div>
+ 
+   </div>
+      </a>
+    </div>
+
+
+    <!-- Gallery Profile -->
+    <!-- ------------------------------------------------------------------- -->
+    <div class="col-12 p-2 " id="charadex-profile">
+      <div class="card">
+<div class="p-2"></div>
+        
+<div class="row no-gutters px-4">
+  <div class="col-lg-3 col-4 ">
+  <img class="imageurl  profile-image">
+  </div>
+  <div class="col-lg-9 col-8">
+    <!-- Header -->
+        <h2 class="  p-4"><span class="text-capitalize username"></span><a href="i'm adding this crap later"><i class="fas fa-exclamation-triangle fa-xs text-danger" data-toggle="tooltip" title="" style="opacity: 50%;" data-original-title="Click here to report this user."></i></a></h2>
+    <div class="row no-gutters mt-n4">
+      <div class="col-lg-6">
+        <!-- Item -->
+                  <div class="d-flex no-gutters col-12 ">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Alias</b>
+                    <a class="alias"></a>
+                  </div>
+                       <!-- Item -->
+                  <div class="d-flex no-gutters col-12">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Rank</b>
+                    <a class="rank"></a>
+                  </div>
+      </div>
+           
+          <div class="col-lg-6">
+
+                 <!-- Item -->
+                  <div class="d-flex no-gutters col-12 ">
+                    <b class="text-muted col-md-5 col-6 text-capitalize">Joined</b>
+                    <a class="artist joindate"></a>
+                  </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="row no-gutters">
+        <div class="col-lg-6 p-3">
+          
+          <!-- Inventory
+          <!-- ----------------------------------------------------------------- -->
+          <div class="tab-pane fade active show" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+            <div id="inventory-gallery">
+        
+
+                <!-- Title
+                <!-- --------------------------------------------------------------- -->
+              
+
+                <div class="collapse" id="inventory-filter-toggle">
+
+                  <!-- Filters
+                  <!-- --------------------------------------------------------------- -->
+                  <div style="display:none;" id="inventory-filter-container">
+                    <hr>
+                    <div class="row no-gutters m-n1" id="inventory-filters"></div>
+                    <!-- Filters -->
+                    <div style="display: none;">
+                      <div class="col-md-4 col-12 p-1" id="inventory-filter">
+                        <label class="px-2"></label>
+                        <select class="form-control" multiple></select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div> 
+
+          
+
+
+           <div class="card bg-faded">
+              <h4 class="p-4 text-primary text-center d-flex justify-content-between align-items-center mb-0">
+                  Inventory
+                 <i class="fa-solid fa-briefcase"></i>
+                </h4>
+               <div id="inventory-group" style="max-height:240px;overflow-y:auto;overflow-x:hidden"></div>
+           </div>
+
+            </div>
+            <div style="display:none;">
+
+              <!-- Gallery List
+              ------------------------------------------------------------------- -->
+              <div class=" inventory-list-container p-3 pt-0" id="inventory-group-list">
+                <b><h6 class="inventory-group-title"></h6></b>
+                <div class="row no-gutters m-n2 inventory-list charadex-gallery-row"></div>
+              </div>
+
+              <!-- Gallery Items
+              ------------------------------------------------------------------- -->
+              <div class="col-lg-4 col-3 p-2" id="inventory-gallery-item">
+                <div class=" h-100">
+
+<div class="row no-gutters">
+  <div class="col-12">
+      <!-- Image -->
+                  <div class=" d-flex flex-fill">
+                    <img class="masterlist-image img-fluid m-auto image" src="">
+                  </div>
+  </div>
+  <div class="col-12">
+       <!-- Quantity -->
+                  <div class="  text-right py-1">
+                    <small>x<span class="quantity"></span></small>
+                  </div>
+  </div>
+</div>
+                
+
+               
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6 p-3">
+         
+
+                <!-- Title
+                <!-- --------------------------------------------------------------- -->
+             
+
+                <div class="collapse" id="inventory-filter-toggle">
+
+                  <!-- Filters
+                  <!-- --------------------------------------------------------------- -->
+                  <div style="display:none;" id="inventory-filter-container">
+                    <hr>
+                    <div class="row no-gutters m-n1" id="inventory-filters"></div>
+                    <!-- Filters -->
+                    <div style="display: none;">
+                      <div class="col-md-4 col-12 p-1" id="inventory-filter">
+                        <label class="px-2"></label>
+                        <select class="form-control" multiple></select>
+                      </div>
+                    </div>
+                  </div>
+
+        
+
+          
+
+              </div>
+           <div class="card bg-faded" id="log-gallery" >
+              
+              <!-- Title -->
+              <!-- --------------------------------------------------------------- -->
+        
+          
+
+              <!-- List -->
+              <!-- --------------------------------------------------------------- -->
+              <div class="p-3 pt-0">
+                   <h4 class=" p-2 text-center text-primary d-flex justify-content-between align-items-center mb-0">
+                 Changes Log
+                 <i class="fa-solid fa-paper-plane"></i>
+                </h4>
+                <div class="row no-gutters">
+                  <div class="col-md-5"><b>Timestamp</b></div>
+                  <div class="col-md-7"><b>Reason</b></div>
+                </div>
+                <hr class="my-2 mx-n2">
+                
+                <div class="log-list" style="max-height:200px;overflow-y:auto;overflow-x:hidden"></div>
+              </div>
+
+              <!-- List Item -->
+              <!-- --------------------------------------------------------------- -->
+              <div style="display: none;">
+                <div  id="log-gallery-item">
+                  <div class="row no-gutters">
+                    <div class="col-md-5"><span class="timestamp"></span></div>
+                    <div class="col-md-7"><span class="reason"></span></div>
+                  </div>
+                  <hr class="my-2 mx-n2">
+                </div>
+              </div>
+
+              <!-- Pagination
+              <!-- --------------------------------------------------------------- -->
+              <div style="display: none;" class="log-pagination-container">
+                <div class="nav d-flex justify-content-center mb-n2">
+                  <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+                  <ul class="pagination log-pagination log-pagination-top justify-content-center m-0"></ul>
+                  <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+
+     
+        <hr class="my-0">
+
+        <!-- Main Body
+        <!-- ----------------------------------------------------------- -->
+        <div class="tab-content p-md-4 p-4">
+
+
+
+    <div id="designs-gallery">
+
+              <!-- Top Card Container
+              <!-- ----------------------------------------------------------------- -->
+              <div class="pb-3 ">
+
+
+
+                <!-- Title
+                <!-- --------------------------------------------------------------- -->
+                <h4 class="text-primary d-flex justify-content-between align-items-center mb-0">
+                  Owned Designs
+                  <a href="#designs-filter-toggle" data-toggle="collapse"><i class="fa-solid fa-shield-cat"></i></a>
+                </h4>
+
+                <div class="collapse" id="designs-filter-toggle">
+
+              
+              
+                </div>
+
+
+                <!-- Pagination
+                <!-- --------------------------------------------------------------- -->
+                <div style="display: none;" class="designs-pagination-container">
+                  <hr class="mb-4 mt-4">
+                  <div class="nav d-flex justify-content-center mb-n2">
+                    <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+                    <ul class="pagination designs-pagination designs-pagination-top justify-content-center m-0"></ul>
+                    <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+                  </div>
+                </div>
+
+                <!-- Prev & Next Topbar
+                <!-- --------------------------------------------------------------- -->
+                <div style="display: none;" id="designs-prevnext-container">
+                  <hr>
+                  <div class="row no-gutters px-2 text-uppercase">
+                    <div class="col-6 px-1">
+                      <a id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
+                    </div>
+                    <div class="col-6 px-1 text-right order-md-1">
+                      <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- List Items Render Here
+              <!-- --------------------------------------------------------------- -->
+              <div class="row no-gutters designs-list m-n2"></div>
+
+              <!-- Pagination
+              <!-- --------------------------------------------------------------- -->
+              <div style="display: none;" class="designs-pagination-container">
+                <div class="card bg-faded px-3 py-1 mt-4">
+                  <div class="nav d-flex justify-content-center">
+                    <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+                    <ul class="pagination designs-pagination designs-pagination-bottom justify-content-center m-0"></ul>
+                    <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Gallery Items
+            <!-- --------------------------------------------------------------- -->
+            <div style="display:none;">
+              <div class="col-lg-3 col-6">
+
+
+              <div class="col-lg-3 col-sm-6 p-2" id="designs-gallery-item">
+                <a class="card bg-faded h-100 profilelink art-container " href="">
+                  <h5 class="card-header bg-faded text-center profileid"></h5>
+                  <div class="card-body cd-gallery-card d-flex flex-fill  ">
+                    <img class="image img-fluid m-auto character-select" src="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- JS                                                                -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap Multiselect -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+  <!-- Charadex Script -->
+  <script src="styles/js/pages/base.js" type="module"></script>
+
+
+
+</body>
+
+</html>
