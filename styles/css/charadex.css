@@ -1,3 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Finger+Paint&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Darumadrop+One&family=DynaPuff:wght@400..700&family=Finger+Paint&family=Lexend+Deca:wght@100..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inconsolata:wght@200..900&family=Joti+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 body {
 
   /* ============================================================= */
@@ -68,8 +76,8 @@ body {
   /* ============================================================= */
   /* Main Fonts
   ================================================================ */
-  --cd-body-font-family: 'Montserrat', sans-serif;
-  --cd-header-font-family: 'Comfortaa', sans-serif;
+  --cd-body-font-family: 'Lexend Deca', sans-serif;
+  --cd-header-font-family: 'Darumadrop one', sans-serif;
   
   /* ============================================================= */
   /* Rarities
@@ -1265,3 +1273,27 @@ font-weight:900
   z-index:2
 }
 
+.submit-form-image {
+ filter:sepia(55%) brightness(0.95) hue-rotate(300deg) ;
+ width:825px;
+ height:2000px;
+}
+
+
+@media (max-width:768px) {
+  .submit-form-image {
+ width:465px !important;
+ height:2000px;
+}
+
+body {
+  overflow-x:hidden
+}
+}
+
+@media (max-width:992px) {
+  .submit-form-image {
+ width:650px;
+ height:2000px;
+}
+}
