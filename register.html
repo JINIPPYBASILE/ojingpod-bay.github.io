@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +13,8 @@
   <!-- About Your Site                                                   -->
   <!-- ----------------------------------------------------------------- -->
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-  <title>Charadex Inventories</title>
-  <meta name="title" content="Charadex Inventories" />
+  <title>Charadex Items</title>
+  <meta name="title" content="Charadex Items" />
   <meta name="type" content="website" />
   <meta name="url" content="https://www.charadex.com/" />
   <meta name="image" content="assets/meta.png" />
@@ -54,72 +56,138 @@
 
 <body id="charadex-body">
 
+
   <!-- --------------------------------------------------------------------
   <-- Header
   <-------------------------------------------------------------------- -->
-    <div class="load-html" data-source="includes/banner.html"></div>
+    <div class="load-html" id="banner" data-source="includes/banner.html"></div>
+  <div class="load-html" id="header" data-source="includes/header.html"></div>
 
-  <div class="load-html" data-source="includes/header.html"></div>
 
   <!-- --------------------------------------------------------------------
   <-- Main List
   <-------------------------------------------------------------------- -->
   <div class="container" id="main-container">
+   <div class="row no-gutters">
+    <div class="col-lg-2">  <div class="load-html" id="clock" data-source="includes/clock.html"></div>
+<div class="load-html" data-source="includes/usersidebar.html"></div></div>
+    <div class="col-lg-10">
+       <div id="charadex-gallery">
 
+      <!-- Top Card Container
+      <!-- ----------------------------------------------------------------- -->
+      <div class="card bg-pink p-md-5 p-4 mb-4">
 
-    <!-- Gallery Container
-    <!-- -------------------------------------------------------------- -->
-<div class="row no-gutters">
-
-  <div class="col-lg-2">
-    <div class="load-html" data-source="includes/clock.html"></div>
-       <div class="load-html" data-source="includes/usersidebar.html"></div>
-  </div>
-  <div class="col-lg-10">
-        <div id="charadex-gallery">
-
-
-      <!-- Filters
-      ----------------------------------------------------------------- -->
-      <div class="card p-md-5 p-4 mb-4 bg-pink">
-
-        <h3 class="mb-0"><a href="register.html">Register</a></h3>
-    What are the benefits of registering? List them here. or ikd lol because i am tired 
-    as frick and want to sleep
-
-        <!-- Faux Folders
-        --------------------------------------------------------------- -->
-        <div style="display:none;" id="charadex-folder-container">
-          
-          <hr>
-          <div class="row no-gutters m-n1" id="charadex-folders"></div>
-          <!-- Buttons -->
-          <div style="display:none;">
-            <div class="col-lg-3 col-md-4 col-sm-6 p-1" id="charadex-folder">
-              <a class="btn btn-primary d-block" href=""></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Filters
+        <!-- Title
         <!-- --------------------------------------------------------------- -->
-        <div style="display:none;" id="charadex-filter-container">
-          
-          <hr>
-          <div class="row no-gutters m-n1" id="charadex-filters"></div>
-          <!-- Filters -->
-          <div style="display: none;">
-            <div class="col-md-4 col-12 p-1" id="charadex-filter">
-              <label class="px-2"></label>
-              <select class="form-control" multiple></select>
-            </div>
+        <h3 class="mb-0"><a href="submit-image.html">Register</a></h3>
+
+<p>Want to create a site account to access the ability to own 
+  Ojingpods, trade items, and participate in events? You can 
+  do so here!
+</p>
+
+
+<p>Does the embed not load? If so, please access the submission form here:
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScE1IpKL7kvfOi9rc5rwkMoHuCUH_huj6oUGKGc7Ka3ZTrAGg/viewform?usp=sharing&ouid=104037411933518234942" class="btn btn-primary col-12">Registration Form</a>
+      </p> 
+
+<div class="card">
+     <div class="row no-gutters ">
+    <div class="col-lg-6">
+             <div class="accordion md-accordion" id="allclosed" role="tablist" aria-multiselectable="true">
+<div class="p-2 pt-0">
+<div class=" text-center" role="tab" id="headingclosed1">
+<a class="p-0" data-toggle="collapse" data-parent="#allclosed" href="#allclosed1" aria-expanded="false" aria-controls="allclosed1"><br> <div class="card col-12 mt-n4">
+<p class="p-2">Submission Info<b> [IMPORTANT!] </b><i class=" fa-solid fa-chevron-down"></i></p>
+</div>
+</a>
+</div>
+<div id="allclosed1" class="collapse" role="tabpanel" aria-labelledby="headingclosed1" data-parent="#allclosed">
+
+    <div class="card p-4 mt-2 border-0 text-small">
+
+<p>Register for a site account here - <b>You can only make 1 account per person, making more than 1 account (sockpuppeting) will result in a ban.</b></p>
+
+<b>FAQ</b>
+<i>Can I edit account information later on?</i>
+<ul>
+    <li>If you make an accident initially uploading your info, please let a staff know and we can help! But edits 
+      to things like blurbs are only allowed with [insert item].
+    </li>
+</ul>
+<i>Why isn’t my account visible?</i>
+<ul>
+    <li>Your account <i>should</i> be visible, so please let a staff member know!</li>
+</ul>
+<i>Why do you collect the e-mails?</i>
+<ul>
+    <li>
+      Emails help us verify the identity of prompt submitters. They are never shared or displayed on the site.
+    </li>
+</ul>
+</div>
+</div>
+
+
+   </div> 
+</div>
+
+    </div>
+    <div class="col-lg-6">
+             <div class="accordion md-accordion" id="ham" role="tablist" aria-multiselectable="true">
+<div class="p-2 pt-0">
+<div class=" text-center" role="tab" id="hamclosed1">
+<a class="p-0" data-toggle="collapse" data-parent="#ham" href="#ham1" aria-expanded="false" aria-controls="ham1"><br> <div class="card col-12 mt-n4">
+<p class="p-2">Filled-out Submission Example</b><i class=" ml-1 fa-solid fa-chevron-down"></i></p>
+</div>
+</a>
+</div>
+<div id="ham1" class="collapse" role="tabpanel" aria-labelledby="hamclosed1" data-parent="#ham">
+
+    <div class="card p-4 mt-2 border-0 text-small">
+<img src="/assets/registration-sample.png">
+</div>
+</div>
+
+
+   </div> 
+</div>
+</div>  
+
+
+</div>
+</div>
+</div>
+
+   <div class="ml-lg-0 ml-n2">
+       <div class="form-container">
+        <iframe class="submit-form-image responsive-iframe " src="https://docs.google.com/forms/d/e/1FAIpQLScE1IpKL7kvfOi9rc5rwkMoHuCUH_huj6oUGKGc7Ka3ZTrAGg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+       </div>
+   </div>
+
+      <!-- List Items Render Here
+      <!-- --------------------------------------------------------------- -->
+      <div class="row no-gutters charadex-list softload m-n2"></div>
+
+      <!-- Pagination
+      <!-- --------------------------------------------------------------- -->
+      <div style="display: none;" class="charadex-pagination-container">
+        <div class="card px-3 py-1 mt-4">
+          <div class="nav d-flex justify-content-center">
+            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+            <ul class="pagination charadex-pagination charadex-pagination-bottom justify-content-center m-0"></ul>
+            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
           </div>
         </div>
+      </div>
 
-        <!-- Search
+    </div>
+      
+       <!-- Search
         <!-- --------------------------------------------------------------- -->
         <div style="display:none;" id="charadex-search-container">
-     
           <hr>
           <div class="row no-gutters m-n1">
             <!-- Search Filter -->
@@ -142,17 +210,6 @@
             <ul class="pagination charadex-pagination charadex-pagination-top justify-content-center m-0"></ul>
             <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
           </div>
-              <!-- Guideline
-        <!-- --------------------------------------------------------------- -->
-<hr class="mt-5 mx-n5">
-  <div class="row no-gutters mx-n4">
-  <div class="col-4 "><span class="ml-lg-0 ml-3">Username</span></div>
-    <div class="col-4 ">Primary Alias</div>
-      <div class="col-2">Rank</div>
-        <div class="col-2">Joined</div>
-  </div>
-  <hr class="mb-n4 mx-n5">
-
         </div>
 
         <!-- Prev & Next Topbar
@@ -167,367 +224,24 @@
               <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
             </div>
           </div>
-          
         </div>
-        
-      
+
       </div>
-    
 
-      <!-- List Items Render Here
-      ----------------------------------------------------------------- -->
-      <div class="row no-gutters charadex-list softload m-n1"></div>
-
-      <!-- Pagination
-      <!-- --------------------------------------------------------------- -->
-      <div style="display: none;" class="charadex-pagination-container">
-        <div class="card px-3 py-1 mt-4 bg-pink">
-          <div class="nav d-flex justify-content-center">
-            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-            <ul class="pagination charadex-pagination charadex-pagination-bottom justify-content-center m-0"></ul>
-            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-          </div>
-        </div>
-      </div>
+     
+    </div>
+   </div>
   </div>
-  </div>
-  
-</div>
-
-  </div>
-
-
 
   <!-- --------------------------------------------------------------------
-    <-- Footer
-    <-------------------------------------------------------------------- -->
-
-  <div class="load-html" data-source="includes/footer.html"></div>
-
-
+  <-- Footer
+  <-------------------------------------------------------------------- -->
+  <div class="load-html" id="footer" data-source="includes/footer.html"></div>
 
   <!-- --------------------------------------------------------------------
   <-- Repeat Items
   <-- Do not remove 'display:none;'
-  <-------------------------------------------------------------------- -->
-  <div style="display:none;">
 
-
-    <!-- Gallery Items
-    <!-- ------------------------------------------------------------------- -->
-    <div class="col-lg-12 p-1 charadex-gallery-item" id="charadex-gallery-item">
-      <a class="card px-4 py-3 profilelink text-truncate" href="">
- 
-      <div class="row no-gutters user-card-preview">
-      <div class="col-4">   <h6 class="m-0"><span class="profileid"></span></h6></div>
-      <div class="col-4">  <h6 class="m-0"><span class="alias"></span></h6></div>
-      <div class="col-2">  <h6 class="m-0"><span class="rank"></span></h6></div>
-      <div class="col-2">  <h6 class="m-0"><span class="joindate"></span></h6></div>
- 
-   </div>
-      </a>
-    </div>
-
-
-    <!-- Gallery Profile -->
-    <!-- ------------------------------------------------------------------- -->
-    <div class="col-12 p-2 " id="charadex-profile">
-      <div class="card">
-<div class="p-2"></div>
-        
-<div class="row no-gutters px-4">
-  <div class="col-lg-3 col-4 ">
-  <img class="imageurl  profile-image">
-  </div>
-  <div class="col-lg-9 col-8">
-    <!-- Header -->
-        <h2 class="  p-4"><span class="text-capitalize username"></span><a href="i'm adding this crap later"><i class="fas fa-exclamation-triangle fa-xs text-danger" data-toggle="tooltip" title="" style="opacity: 50%;" data-original-title="Click here to report this user."></i></a></h2>
-    <div class="row no-gutters mt-n4">
-      <div class="col-lg-6">
-        <!-- Item -->
-                  <div class="d-flex no-gutters col-12 ">
-                    <b class="text-muted col-md-5 col-6 text-capitalize">Alias</b>
-                    <a class="alias"></a>
-                  </div>
-                       <!-- Item -->
-                  <div class="d-flex no-gutters col-12">
-                    <b class="text-muted col-md-5 col-6 text-capitalize">Rank</b>
-                    <a class="rank"></a>
-                  </div>
-      </div>
-           
-          <div class="col-lg-6">
-
-                 <!-- Item -->
-                  <div class="d-flex no-gutters col-12 ">
-                    <b class="text-muted col-md-5 col-6 text-capitalize">Joined</b>
-                    <a class="artist joindate"></a>
-                  </div>
-          </div>
-    </div>
-  </div>
-</div>
-
-
-
-      <div class="row no-gutters">
-        <div class="col-lg-6 p-3">
-          
-          <!-- Inventory
-          <!-- ----------------------------------------------------------------- -->
-          <div class="tab-pane fade active show" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
-            <div id="inventory-gallery">
-        
-
-                <!-- Title
-                <!-- --------------------------------------------------------------- -->
-              
-
-                <div class="collapse" id="inventory-filter-toggle">
-
-                  <!-- Filters
-                  <!-- --------------------------------------------------------------- -->
-                  <div style="display:none;" id="inventory-filter-container">
-                    <hr>
-                    <div class="row no-gutters m-n1" id="inventory-filters"></div>
-                    <!-- Filters -->
-                    <div style="display: none;">
-                      <div class="col-md-4 col-12 p-1" id="inventory-filter">
-                        <label class="px-2"></label>
-                        <select class="form-control" multiple></select>
-                      </div>
-                    </div>
-                  </div>
-
-                </div> 
-
-          
-
-
-           <div class="card bg-faded">
-              <h4 class="p-4 text-primary text-center d-flex justify-content-between align-items-center mb-0">
-                  Inventory
-                 <i class="fa-solid fa-briefcase"></i>
-                </h4>
-               <div id="inventory-group" style="max-height:240px;overflow-y:auto;overflow-x:hidden"></div>
-           </div>
-
-            </div>
-            <div style="display:none;">
-
-              <!-- Gallery List
-              ------------------------------------------------------------------- -->
-              <div class=" inventory-list-container p-3 pt-0" id="inventory-group-list">
-                <b><h6 class="inventory-group-title"></h6></b>
-                <div class="row no-gutters m-n2 inventory-list charadex-gallery-row"></div>
-              </div>
-
-              <!-- Gallery Items
-              ------------------------------------------------------------------- -->
-              <div class="col-lg-4 col-3 p-2" id="inventory-gallery-item">
-                <div class=" h-100">
-
-<div class="row no-gutters">
-  <div class="col-12">
-      <!-- Image -->
-                  <div class=" d-flex flex-fill">
-                    <img class="masterlist-image img-fluid m-auto image" src="">
-                  </div>
-  </div>
-  <div class="col-12">
-       <!-- Quantity -->
-                  <div class="  text-right py-1">
-                    <small>x<span class="quantity"></span></small>
-                  </div>
-  </div>
-</div>
-                
-
-               
-
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="col-lg-6 p-3">
-         
-
-                <!-- Title
-                <!-- --------------------------------------------------------------- -->
-             
-
-                <div class="collapse" id="inventory-filter-toggle">
-
-                  <!-- Filters
-                  <!-- --------------------------------------------------------------- -->
-                  <div style="display:none;" id="inventory-filter-container">
-                    <hr>
-                    <div class="row no-gutters m-n1" id="inventory-filters"></div>
-                    <!-- Filters -->
-                    <div style="display: none;">
-                      <div class="col-md-4 col-12 p-1" id="inventory-filter">
-                        <label class="px-2"></label>
-                        <select class="form-control" multiple></select>
-                      </div>
-                    </div>
-                  </div>
-
-        
-
-          
-
-              </div>
-           <div class="card bg-faded" id="log-gallery" >
-              
-              <!-- Title -->
-              <!-- --------------------------------------------------------------- -->
-        
-          
-
-              <!-- List -->
-              <!-- --------------------------------------------------------------- -->
-              <div class="p-3 pt-0">
-                   <h4 class=" p-2 text-center text-primary d-flex justify-content-between align-items-center mb-0">
-                 Changes Log
-                 <i class="fa-solid fa-paper-plane"></i>
-                </h4>
-                <div class="row no-gutters">
-                  <div class="col-md-5"><b>Timestamp</b></div>
-                  <div class="col-md-7"><b>Reason</b></div>
-                </div>
-                <hr class="my-2 mx-n2">
-                
-                <div class="log-list" style="max-height:200px;overflow-y:auto;overflow-x:hidden"></div>
-              </div>
-
-              <!-- List Item -->
-              <!-- --------------------------------------------------------------- -->
-              <div style="display: none;">
-                <div  id="log-gallery-item">
-                  <div class="row no-gutters">
-                    <div class="col-md-5"><span class="timestamp"></span></div>
-                    <div class="col-md-7"><span class="reason"></span></div>
-                  </div>
-                  <hr class="my-2 mx-n2">
-                </div>
-              </div>
-
-              <!-- Pagination
-              <!-- --------------------------------------------------------------- -->
-              <div style="display: none;" class="log-pagination-container">
-                <div class="nav d-flex justify-content-center mb-n2">
-                  <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                  <ul class="pagination log-pagination log-pagination-top justify-content-center m-0"></ul>
-                  <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-                </div>
-              </div>
-
-            </div>
-        </div>
-      </div>
-
-     
-        <hr class="my-0">
-
-        <!-- Main Body
-        <!-- ----------------------------------------------------------- -->
-        <div class="tab-content p-md-4 p-4">
-
-
-
-    <div id="designs-gallery">
-
-              <!-- Top Card Container
-              <!-- ----------------------------------------------------------------- -->
-              <div class="pb-3 ">
-
-
-
-                <!-- Title
-                <!-- --------------------------------------------------------------- -->
-                <h4 class="text-primary d-flex justify-content-between align-items-center mb-0">
-                  Owned Designs
-                  <a href="#designs-filter-toggle" data-toggle="collapse"><i class="fa-solid fa-shield-cat"></i></a>
-                </h4>
-
-                <div class="collapse" id="designs-filter-toggle">
-
-              
-              
-                </div>
-
-
-                <!-- Pagination
-                <!-- --------------------------------------------------------------- -->
-                <div style="display: none;" class="designs-pagination-container">
-                  <hr class="mb-4 mt-4">
-                  <div class="nav d-flex justify-content-center mb-n2">
-                    <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                    <ul class="pagination designs-pagination designs-pagination-top justify-content-center m-0"></ul>
-                    <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-                  </div>
-                </div>
-
-                <!-- Prev & Next Topbar
-                <!-- --------------------------------------------------------------- -->
-                <div style="display: none;" id="designs-prevnext-container">
-                  <hr>
-                  <div class="row no-gutters px-2 text-uppercase">
-                    <div class="col-6 px-1">
-                      <a id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
-                    </div>
-                    <div class="col-6 px-1 text-right order-md-1">
-                      <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- List Items Render Here
-              <!-- --------------------------------------------------------------- -->
-              <div class="row no-gutters designs-list m-n2"></div>
-
-              <!-- Pagination
-              <!-- --------------------------------------------------------------- -->
-              <div style="display: none;" class="designs-pagination-container">
-                <div class="card bg-faded px-3 py-1 mt-4">
-                  <div class="nav d-flex justify-content-center">
-                    <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                    <ul class="pagination designs-pagination designs-pagination-bottom justify-content-center m-0"></ul>
-                    <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Gallery Items
-            <!-- --------------------------------------------------------------- -->
-            <div style="display:none;">
-              <div class="col-lg-3 col-6">
-
-
-              <div class="col-lg-3 col-sm-6 p-2" id="designs-gallery-item">
-                <a class="card bg-faded h-100 profilelink art-container " href="">
-                  <h5 class="card-header bg-faded text-center profileid"></h5>
-                  <div class="card-body cd-gallery-card d-flex flex-fill  ">
-                    <img class="image img-fluid m-auto character-select" src="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          
-
-
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- ----------------------------------------------------------------- -->
   <!-- JS                                                                -->
@@ -544,7 +258,6 @@
 
   <!-- Charadex Script -->
   <script src="styles/js/pages/base.js" type="module"></script>
-
 
 
 </body>
